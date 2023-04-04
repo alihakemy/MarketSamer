@@ -1,0 +1,16 @@
+package com.hakemy.marketsamer.ui.register.serviceModel.response.createAccount
+
+
+import com.google.gson.annotations.SerializedName
+import androidx.annotation.Keep
+import com.hakemy.marketsamer.ui.register.serviceModel.response.User
+
+@Keep
+data class Data(
+    @SerializedName("activation_code")
+    val activationCode: String, // 4156
+    @SerializedName("token")
+    val token: String, // eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWE3OTYzYzQyZWRlZjg0N2FiOWY1MTIzZmEzZWIxM2RmNGM3MTFiNzI0OWJlM2IyOTAzOTY4NjYyMWVmMTAzMmVlNGMyNzU1NjljM2IwMTIiLCJpYXQiOjE2Nzg1NDQ2NDksIm5iZiI6MTY3ODU0NDY0OSwiZXhwIjoxNzEwMTY3MDQ5LCJzdWIiOiI2MzAyIiwic2NvcGVzIjpbXX0.ly9-1KD1WYZWzuEdOTa72WVFg3jr6LZsnakvygpWCGv4VNnQaTe0mvZg5HRK5vnwxRp7phmGWUSIhSz-wlZryUZVzAf89Cqy8QNZQkixiCXmYFhvFKheei9-jV9_HNnB5LY_hfQj5z6xUVFT1m60GN-IXYF00gk5TO_r2BK3WsrCh6XWIj2xk_WZh3ViM3LwmblGFi4cHlHY3tTguff-gdC1zMSWPqntD99DL4IlmnnR6qPPNGWJlZEwzL_i3cwFCPqtmmD0xGeGIL_5LkUqCuwLDVly59IKRYhbtvfjcuM5aTGfUpx6ZlWtNnjtrYIB2BrwhsDVxgStzjwt1PkrYV2ozssllkjWNOlhKW31V0Qh_VFcsJtnjTd8gBdo6oF-EeDsdxBn9bCDigguv-sdgCCQ8Vbqpd9wlU1s-nBziBd8YRMWrjFvJSCK8A8kb165nz6CyjSv2IrMYnis1kgRSBKLDM8WyXBo9b1idfyonbNsyX1NSQWdNrBdcT4_Y5knZdiOVufHYcwKA5su9Y5IaQFE6banL1sUMvpcCQyB_EWRS4PxZ2Nl9H5Q-EjPiJ3eJEWvkv-z8IU6BC2XjNazA8PJF7nNhQ9kZukbHNEYXwwDf3XB3a19MmX1qGIDmG_MUaJX5ebJcGXEIuQb5NyUJO2W4f3-RY2mwxmNjHWN34s
+    @SerializedName("user")
+    var user: User?=null
+)

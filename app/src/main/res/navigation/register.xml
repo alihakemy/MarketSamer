@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        tools:layout="@layout/fragment_login"
+        android:name="com.hakemy.marketsamer.ui.register.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/createNewAccount"
+        tools:layout="@layout/fragment_create_new_account"
+        android:name="com.hakemy.marketsamer.ui.register.CreateNewAccount"
+        android:label="CreateNewAccount" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.hakemy.marketsamer.ui.register.ForgetPasswordFragment"
+        android:label="ResetPasswordFragment" />
+    <fragment
+        android:id="@+id/verificationCode"
+        android:name="com.hakemy.marketsamer.ui.register.VerificationCode"
+        android:label="VerificationCode" />
+</navigation>

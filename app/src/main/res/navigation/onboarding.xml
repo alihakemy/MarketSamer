@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/onboardingFirst">
+    <fragment
+        android:id="@+id/onboardingFirst"
+        android:name="com.hakemy.marketsamer.ui.onboarding.OnboardingFirst"
+        android:label="fragment_onboarding_first"
+        tools:layout="@layout/fragment_onboarding_first" >
+        <action
+            android:id="@+id/action_onboardingFirst_to_onboardingSecond"
+            app:destination="@id/onboardingSecond" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingSecond"
+        android:name="com.hakemy.marketsamer.ui.onboarding.OnboardingSecond"
+        android:label="fragment_onboarding_second"
+        tools:layout="@layout/fragment_onboarding_second" >
+        <action
+            android:id="@+id/action_onboardingSecond_to_onboardingThird"
+            app:destination="@id/onboardingThird" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingThird"
+        android:name="com.hakemy.marketsamer.ui.onboarding.OnboardingThird"
+        android:label="fragment_onboarding_third"
+        tools:layout="@layout/fragment_onboarding_third" />
+</navigation>

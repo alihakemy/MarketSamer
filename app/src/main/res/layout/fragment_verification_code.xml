@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_grey"
+  >
+
+    <LinearLayout
+        android:id="@+id/ln_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_108sdp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_black"
+            android:text="@string/confirm_phone_number"
+            android:textColor="#44A3D8"
+            android:textSize="@dimen/_18ssp"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_header_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_light"
+            android:text="@string/confirm_header_desc"
+            android:textAlignment="center"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otp_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layoutDirection="ltr"
+        android:textColor="@color/color_black"
+        app:bar_enabled="false"
+        app:box_margin="@dimen/_6sdp"
+        app:height="@dimen/_44sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ln_header"
+        app:length="4"
+        app:otp_box_background="@drawable/shape_white_rounded"
+        app:width="@dimen/_44sdp"
+        tools:otp="123456" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/shape_rounded_gold"
+        android:drawableEnd="@drawable/ic_rounded_arrow_right"
+        android:fontFamily="@font/cairo_semi_bold"
+        android:gravity="start|center"
+        android:paddingHorizontal="@dimen/_24sdp"
+        android:text="@string/confirm"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintTop_toBottomOf="@id/otp_code"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_24sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btn_confirm">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_light"
+            android:text="@string/the_code_will_be_sent_back"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_12ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/cairo_medium"
+            android:text="@string/_00_30"
+            android:textColor="#44A3D8"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:fontFamily="@font/cairo_medium"
+            android:text="@string/second"
+            android:textColor="#44A3D8"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="TextContrastCheck" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

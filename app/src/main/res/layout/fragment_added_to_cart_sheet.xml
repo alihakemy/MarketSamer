@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ln_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    app:layout_behavior="com.androidbolts.topsheet.TopSheetBehavior"
+    tools:ignore="UselessParent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_gold"
+        android:drawableEnd="@drawable/ic_rounded_white_correct"
+        android:fontFamily="@font/cairo_bold"
+        android:padding="@dimen/_6sdp"
+        android:text="@string/to_cart"
+        android:textColor="@color/color_white"
+        android:textSize="14sp"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_black"
+            android:drawableEnd="@drawable/ic_rounded_arrow_right"
+            android:fontFamily="@font/cairo_semi_bold"
+            android:gravity="start|center"
+            android:paddingHorizontal="@dimen/_24sdp"
+            android:text="@string/go_to_cart"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_shopping"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rounded_black_bordered"
+            android:drawableEnd="@drawable/ic_rounded_arrow_right_black"
+            android:fontFamily="@font/cairo_semi_bold"
+            android:gravity="start|center"
+            android:paddingHorizontal="@dimen/_24sdp"
+            android:text="@string/go_to_shop"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+
+</LinearLayout>

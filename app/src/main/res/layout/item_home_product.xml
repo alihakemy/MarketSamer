@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_item_product"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_4sdp"
+    android:background="@drawable/shape_6_grey_border_rounded">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_fav"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_100sdp"
+        app:cardElevation="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_image">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_fav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_grey_heart"
+            tools:ignore="ImageContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:scaleType="centerCrop"
+        android:src="@color/color_gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius_top_left="@dimen/_5sdp"
+        app:riv_corner_radius_top_right="@dimen/_5sdp"
+        tools:ignore="ImageContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_6sdp"
+        app:layout_constraintVertical_bias="1"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_image">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/cairo_bold"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:text="@string/name"
+            android:textColor="@color/color_orange"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="TextContrastCheck" />
+
+        <LinearLayout
+            android:id="@+id/ln_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_price_after"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:text="@string/name"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_12ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_price_before"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:fontFamily="@font/cairo_semi_bold"
+                android:text="@string/name"
+                android:textColor="@color/color_darker_grey"
+                android:textSize="@dimen/_8ssp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_feature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:drawableStart="@drawable/ic_tape_measure"
+            android:drawablePadding="@dimen/_4sdp"
+            android:text="@string/name"
+            android:textColor="@color/color_darker_grey"
+            android:textSize="@dimen/_9ssp" />
+
+        <LinearLayout
+            android:id="@+id/ln_seller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_seller_person"
+                android:drawablePadding="@dimen/_4sdp"
+                android:fontFamily="@font/cairo_light"
+                android:text="@string/seller_colon"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_9ssp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="@string/name"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_9ssp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_discount_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/shape_left_rounded_gradient_orange"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_4sdp"
+        android:text="@string/_965"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

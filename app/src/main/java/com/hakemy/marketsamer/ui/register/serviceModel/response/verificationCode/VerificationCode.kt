@@ -1,0 +1,15 @@
+package com.hakemy.marketsamer.ui.register.serviceModel.response.verificationCode
+
+
+import com.google.gson.annotations.SerializedName
+import androidx.annotation.Keep
+
+@Keep
+data class VerificationCode(
+    @SerializedName("data")
+    val `data`: Data?,
+    @SerializedName("status")
+    val status: Boolean, // true
+    @SerializedName("token")
+    val token: String // eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNTZmY2I0ODllNzI5Zjk5MTlmMDgwYzk2ZGNjOTYwYjI3OTUwMmFkYTdkMmE1NDgxMzI1OGQxMmE2ZTRiOWMwOWM1NmRkY2IyYjI3YTI3OTgiLCJpYXQiOjE2Nzg1NDY1OTIsIm5iZiI6MTY3ODU0NjU5MiwiZXhwIjoxNzEwMTY4OTkyLCJzdWIiOiI2MzA2Iiwic2NvcGVzIjpbXX0.Q2EcNcFHBbrooWERuN5pE0P5z-lS3XEaLs8x6c2OVSzaO0L5JYmFCF9X5FrV_do4tap-5mrJH5j8O_BLZCU72AKNtIfsmzUk5pPnykQlIyGy2XOHzy4WVrPwvbjnRVrMZKUUexbTIKAoB2N4bW3idDNJJIUdEygcq3FVgkJggP9qtVGh4KNmGxWx8o9_r_yyVxG-adP6lypY2zBoGAc1tJlocKQfixvTgM8Msa-aPZjnlgZ4IcyHhDd6UU-SGslivSfdT07EnoqNRNDHDN3Rkgwq4y3pxZKbuKHUgFwrJtT34bhVcsRP2kMCrJFMVFvccFTLWxoAIluXCbYk7XNAY2Pxi73vZSOpQ4RtW5vxTAgiSRIP7uJe4It2d0EYFayjd21zPAxZXCHcQgOcwoiAVA8qwxN1fDxw8e9ZkMCUyI0Xlz2vy5QwZRRsoFGFrNVui303BHsWYjDNwCxNcAlcD2kVInHnn_6-QFSvRmiHldDmsbO-eaRZXnEiuVfA-iCnYF-trx0X3uDgjRwZWi3oI2mYXOGkhXO2wY2-RAbmOJNl4ts56LuRqU5_FK1mWKEaEwrh0URzU1GykTZSIe_fao_5SwD1u-gCKDnnPk4kxT-8ZjVx_MeOzsH15XQGGUTdkfpYyAylbGWnwSQX-iQKc10aNQPJOEIQICKMskadLu8
+)
