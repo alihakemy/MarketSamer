@@ -7,6 +7,7 @@ import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 
 object RetrofitService {
     private var retrofit: Retrofit? = null
@@ -36,6 +37,7 @@ object RetrofitService {
                     .baseUrl("https://sharwa.masharia.co/api/")
 
                     .client(okHttpClient)
+
 
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()

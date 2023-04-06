@@ -33,5 +33,8 @@ data class Products(
     @SerializedName("shippingCostFreeAfter")
     val shippingCostFreeAfter: String, // 5
     @SerializedName("special")
-    val special: List<Special>
+    val special: List<Special>,
+    @SerializedName("tager_id")
+
+   var tagerId: Int? = 0
 )

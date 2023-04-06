@@ -1,308 +1,358 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#F2F2F2"
-    android:layout_height="match_parent"
-  >
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.cycles.home_cycle.fragment.product_details.ProductDetailsFragment">
+        android:layout_height="0dp"
+        android:background="#F2F2F2"
+        android:paddingBottom="65dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ScrollView
-            android:id="@+id/scrollView3"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:background="@color/color_grey"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <com.denzcoskun.imageslider.ImageSlider
-                        android:id="@+id/slider2"
-                        android:layout_width="match_parent"
-                        android:layout_height="389dp"
-
-                        app:iss_auto_cycle="true"
-                        app:iss_delay="0"
-                        app:iss_period="1000"
-                        app:iss_title_background="@null"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/imageView10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/back" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-        </ScrollView>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="30dp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView13"
-            app:layout_constraintTop_toBottomOf="@+id/productName">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                tools:context=".ui.cycles.home_cycle.fragment.product_details.ProductDetailsFragment">
+
+                <ScrollView
+                    android:id="@+id/scrollView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/color_grey"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.denzcoskun.imageslider.ImageSlider
+                                android:id="@+id/slider2"
+                                android:layout_width="match_parent"
+                                android:layout_height="389dp"
+
+                                app:iss_auto_cycle="true"
+                                app:iss_delay="0"
+                                app:iss_period="1000"
+                                app:iss_title_background="@null"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/back" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView13"
+                    app:layout_constraintTop_toBottomOf="@+id/productName">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
-                <ImageView
-                    android:id="@+id/imageView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/minuis" />
+                        <ImageView
+                            android:id="@+id/imageView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/minuis" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView14"
+                            app:layout_constraintStart_toEndOf="@+id/imageView17"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/plusss" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
 
                 <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView14"
-                    app:layout_constraintStart_toEndOf="@+id/imageView17"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/imageView17"
+                    android:id="@+id/productName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/changa"
+
+                    android:text="اكواب بلاستيكية بغطاء"
+                    android:textAppearance="@style/some_id"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/plusss" />
+                    app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+                <TextView
+                    android:id="@+id/some_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/changa"
+                    android:text="20 قطعه"
+
+                    android:textAppearance="@style/some_id"
+                    app:layout_constraintStart_toStartOf="@+id/productName"
+                    app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+                <TextView
+                    android:id="@+id/current_pri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/changa"
+
+                    android:gravity="top"
+                    android:text="36,99 د.ك"
+                    android:textAppearance="@style/current_pri"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/some_id"
+                    app:layout_constraintTop_toBottomOf="@+id/some_id" />
+
+
+                <TextView
+                    android:id="@+id/list_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/changa"
+                    android:gravity="top"
+                    android:lineSpacingExtra="-12sp"
+
+                    android:text="76,99 د.ك"
+                    android:textAppearance="@style/list_price"
+                    app:layout_constraintBottom_toBottomOf="@+id/current_pri"
+                    app:layout_constraintStart_toEndOf="@+id/current_pri" />
+
+                <TextView
+                    android:id="@+id/freedeliver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/red_rec"
+                    android:fontFamily="@font/changa"
+                    android:gravity="top"
+                    android:lineSpacingExtra="-2sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="التوصيل مجاني عند الطلب اكثر من 30 د.ك"
+                    android:textAppearance="@style/some_id"
+                    android:textColor="#DF1A2B"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/current_pri"
+                    app:layout_constraintTop_toBottomOf="@+id/current_pri" />
+
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/changa"
+                    android:lineSpacingExtra="-7sp"
+                    android:text="الأكواب مصنوعة من بلاستيك البولي بروبلين الآمن غذائياً. الأغطية مصنوعة من بلاستيك البولي إيثيلين تيرفثالات الآمن غذائياً."
+                    android:textAppearance="@style/some_id"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/freedeliver" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/details"
+                    app:srcCompat="@drawable/recttt" />
+
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView12"
+                    app:srcCompat="@drawable/recttt" />
+
+                <TextView
+                    android:id="@+id/sizee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/changa"
+                    android:text="اختر الحجم"
+                    android:textAppearance="@style/some_id"
+
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/imageView12"
+                    app:layout_constraintTop_toTopOf="@+id/imageView12" />
+
+                <TextView
+                    android:id="@+id/sizee2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/changa"
+                    android:text="المواصفات"
+                    android:textAppearance="@style/some_id"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/imageView12"
+                    app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/scrollView3"
+                    app:srcCompat="@drawable/group_7565" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView13"
+                    app:layout_constraintTop_toTopOf="@+id/imageView13"
+                    app:srcCompat="@drawable/share_icon" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/changa"
+                    android:gravity="right|top"
+                    android:text="تصفح أيضاً"
+                    android:textAppearance="@style/some_id"
+                    app:layout_constraintStart_toStartOf="@+id/imageView16"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_fav_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/item_product_main_screen" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-        <TextView
-            android:id="@+id/productName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/changa"
-
-            android:textSize="25sp"
-            android:layout_marginTop="8dp"
-            android:text="اكواب بلاستيكية بغطاء"
-            android:textAppearance="@style/some_id"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
-        <TextView
-            android:id="@+id/some_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="20 قطعه"
-            android:fontFamily="@font/changa"
-
-            android:textAppearance="@style/some_id"
-            app:layout_constraintStart_toStartOf="@+id/productName"
-            app:layout_constraintTop_toBottomOf="@+id/productName" />
-
-        <TextView
-            android:id="@+id/current_pri"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/changa"
-
-            android:gravity="top"
-            android:text="36,99 د.ك"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            android:textAppearance="@style/current_pri"
-            app:layout_constraintStart_toStartOf="@+id/some_id"
-            app:layout_constraintTop_toBottomOf="@+id/some_id" />
 
 
-        <TextView
-            android:id="@+id/list_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="8dp"
-            android:gravity="top"
-            android:lineSpacingExtra="-12sp"
-            android:fontFamily="@font/changa"
+        </LinearLayout>
 
-            android:text="76,99 د.ك"
-            android:textAppearance="@style/list_price"
-            app:layout_constraintBottom_toBottomOf="@+id/current_pri"
-            app:layout_constraintStart_toEndOf="@+id/current_pri" />
 
-        <TextView
-            android:id="@+id/freedeliver"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/red_rec"
-            android:fontFamily="@font/changa"
-            android:gravity="top"
-            android:lineSpacingExtra="-2sp"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:text="التوصيل مجاني عند الطلب اكثر من 30 د.ك"
-            android:textAppearance="@style/some_id"
-            android:textColor="#DF1A2B"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/current_pri"
-            app:layout_constraintTop_toBottomOf="@+id/current_pri" />
+    </ScrollView>
 
-        <TextView
-            android:id="@+id/details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-
-            android:layout_marginEnd="8dp"
-            android:fontFamily="@font/changa"
-            android:lineSpacingExtra="-7sp"
-            android:text="الأكواب مصنوعة من بلاستيك البولي بروبلين الآمن غذائياً. الأغطية مصنوعة من بلاستيك البولي إيثيلين تيرفثالات الآمن غذائياً."
-            android:textAppearance="@style/some_id"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/freedeliver" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16sp"
-            android:scaleType="fitXY"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/details"
-            app:srcCompat="@drawable/recttt" />
-
-
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="16dp"
-            android:scaleType="fitXY"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12"
-            app:srcCompat="@drawable/recttt" />
-
-        <TextView
-            android:id="@+id/sizee"
+            android:id="@+id/imageView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="اختر الحجم"
-            android:textColor="@color/black"
-            android:fontFamily="@font/changa"
-
-            android:textAppearance="@style/some_id"
-            app:layout_constraintStart_toStartOf="@+id/imageView12"
-            app:layout_constraintTop_toTopOf="@+id/imageView12" />
-
-        <TextView
-            android:id="@+id/sizee2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/changa"
-            android:text="المواصفات"
-            android:textColor="@color/black"
-            android:textAppearance="@style/some_id"
-            app:layout_constraintStart_toStartOf="@+id/imageView12"
-            app:layout_constraintTop_toTopOf="@+id/imageView16" />
-
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scrollView3"
-            app:srcCompat="@drawable/group_7565" />
-
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
-            app:layout_constraintEnd_toStartOf="@+id/imageView13"
-            app:layout_constraintTop_toTopOf="@+id/imageView13"
-            app:srcCompat="@drawable/share_icon" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="right|top"
-            android:text="تصفح أيضاً"
-            android:fontFamily="@font/changa"
-            android:textAppearance="@style/some_id"
-            app:layout_constraintStart_toStartOf="@+id/imageView16"
-            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_fav_product"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            tools:itemCount="4"
-            tools:listitem="@layout/item_product_main_screen" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cartrect" />
 
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_medium"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+            app:layout_constraintStart_toStartOf="@+id/imageView11"
+            app:layout_constraintTop_toTopOf="@+id/imageView11" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</ScrollView>
-
-
+</androidx.constraintlayout.widget.ConstraintLayout>

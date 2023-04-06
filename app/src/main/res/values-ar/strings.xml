@@ -65,7 +65,7 @@
     <string name="change">تغيير</string>
     <string name="home">الرئيسية</string>
     <string name="categories">الاقسام</string>
-    <string name="our_offers">عروضنا</string>
+    <string name="our_offers">العروض</string>
     <string name="companies">الشركات</string>
     <string name="my_profile">حسابى</string>
     <string name="learn_how_to_build">تعلم كيف\nتبنى</string>
@@ -174,12 +174,12 @@
     <string name="to_cart">الى السلة</string>
     <string name="go_to_cart">الذهاب للسلة</string>
     <string name="go_to_shop">اكمل التسوق</string>
-    <string name="confirm_order">اتمام الطلب</string>
+    <string name="confirm_order">تأكيد الطلب</string>
     <string name="total">المجموع</string>
     <string name="cart">سلة التسوق</string>
     <string name="choices_colon">الاختيارات :</string>
     <string name="extras_colon">الاضافات :</string>
-    <string name="delivery_address">عنوان التوصيل</string>
+    <string name="delivery_address">اختر عنوان التوصيل</string>
     <string name="review_order_and_payment">مراجعة الطلب والدفع</string>
     <string name="delivery_chosen_address">عنوان التوصيل المختار</string>
     <string name="do_you_have_a_coupon_save_now">لديك كوبون؟ وفر الان</string>
@@ -189,7 +189,7 @@
     <string name="delivery">التوصيل</string>
     <string name="discount_coupon">كوبون الخصم</string>
     <string name="overall">الإجمالى</string>
-    <string name="quantity">الكمية</string>
+    <string name="quantity">الكمية : </string>
     <string name="review_and_confirm_order">مراجعة واتمام الطلب</string>
     <string name="package_no">شحنة رقم</string>
     <string name="invalid_coupon">أدخل كوبون صحيح</string>
@@ -245,5 +245,10 @@
     <string name="my_orderss">طلباتى</string>
     <string name="profile">حسابى</string>
     <string name="searchs">ابحث عما تريد هنا</string>
+    <string name="Congratulations">تم الاضافه بنجاح</string>
+    <string name="gotoCart">اذهب الى السله</string>
+    <string name="det">الخصائص : </string>
+    <string name="gotoShopping">اذهب الى التسوق</string>
+    <string name="emptyCart">السله فارغه</string>
 
 </resources>

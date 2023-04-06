@@ -9,6 +9,7 @@ import com.hakemy.marketsamer.base.BaseFragment
 import com.hakemy.marketsamer.databinding.FragmentDashboardBinding
 import com.hakemy.marketsamer.ui.offers.recycler.OffersRecyclerViewAdapter
 import com.hakemy.marketsamer.ui.offers.recycler.categories.CategoriesRecyclerViewAdapter
+import com.hakemy.marketsamer.ui.search.SearchActivity
 import com.hakemy.marketsamer.utils.ResultState
 
 class OffersFragment :
@@ -78,13 +79,21 @@ class OffersFragment :
                     }
 
 
-                    adapter.setItems(result.data.data.products.data as ArrayList<Any>)
+                    adapter.setItems(result.data.data.products.productItem as ArrayList<Any>)
 
 
                 }
             }
 
         })
+
+        binding.imageView6.setOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
+        binding.imageView4.setOnClickListener {
+            SearchActivity.startSearchActivity(requireContext())
+        }
 
 
     }

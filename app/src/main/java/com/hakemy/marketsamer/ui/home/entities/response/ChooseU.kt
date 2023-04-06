@@ -15,7 +15,7 @@ data class ChooseU(
     @SerializedName("image_path")
     val imagePath: String, // https://sharwa.masharia.co/storage/images/mainProduct/xCBbk8cPLcistUdNDi5BkmZi6fAtUfbe0T75hnk2.png
     @SerializedName("is_favourite")
-    val isFavourite: Boolean, // false
+    var isFavourite: Boolean, // false
     @SerializedName("mainprice")
     val mainprice: String, // 50.000
     @SerializedName("minorder")

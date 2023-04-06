@@ -71,4 +71,44 @@ object SharePreferenceManager {
         }
 
     }
+
+
+
+
+
+
+    fun storelat (token:String){
+        sharedPreferences?.edit()?.putString("lat",token)?.apply()
+
+    }
+    fun getlat (): String? {
+        return sharedPreferences?.getString("lat", "")
+
+    }
+
+
+    fun storelng (token:String){
+        sharedPreferences?.edit()?.putString("lng",token)?.apply()
+
+    }
+    fun getlng (): String? {
+        return sharedPreferences?.getString("lng", "")
+
+    }
+
+
+
+
+    fun storeaddress(token:String){
+        sharedPreferences?.edit()?.putString("address",token)?.apply()
+
+    }
+    fun getaddress (): String? {
+        return sharedPreferences?.getString("address", "")
+
+    }
+
+
+
+
 }

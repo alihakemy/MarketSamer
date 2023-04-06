@@ -12,6 +12,7 @@ import com.hakemy.marketsamer.ui.home.adapters.sections.CategoryMainAdapter
 import com.hakemy.marketsamer.ui.home.entities.response.Category
 import com.hakemy.marketsamer.ui.home.entities.response.ChooseU
 import com.hakemy.marketsamer.ui.home.entities.response.Product
+import com.hakemy.marketsamer.ui.search.SearchActivity
 import com.hakemy.marketsamer.utils.ResultState
 
 class HomeFragment :
@@ -40,7 +41,7 @@ class HomeFragment :
                     progressDialog.dismiss()
 
                     val imageList = ArrayList<SlideModel>()
-                    result.data.data.banner.forEach {
+                    result.data.data.slider.forEach {
                         imageList.add(SlideModel(it.imagePath, ScaleTypes.FIT ))
 
                     }
@@ -64,6 +65,11 @@ class HomeFragment :
 
         })
 
+        binding.iToolbar.layoutToolbar.setOnClickListener {
+
+            SearchActivity.startSearchActivity(requireContext())
+
+        }
     }
 
     private fun setCategories(Category: List<Category>) {

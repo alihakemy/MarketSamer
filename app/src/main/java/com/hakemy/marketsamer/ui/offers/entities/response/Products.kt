@@ -9,7 +9,7 @@ data class Products(
     @SerializedName("current_page")
     val currentPage: Int, // 1
     @SerializedName("data")
-    val `data`: List<DataX>,
+    val productItem: ArrayList<ProductsItem>,
     @SerializedName("first_page_url")
     val firstPageUrl: String, // https://sharwa.masharia.co/api/offers?page=1
     @SerializedName("from")

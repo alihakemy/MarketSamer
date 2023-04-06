@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.hakemy.marketsamer.databinding.OfferItemBinding
 import com.hakemy.marketsamer.databinding.SliderItenBinding
 import com.hakemy.marketsamer.ui.offers.entities.response.Banner
-import com.hakemy.marketsamer.ui.offers.entities.response.DataX
+import com.hakemy.marketsamer.ui.offers.entities.response.ProductsItem
 
 class OffersRecyclerViewAdapter : RecyclerView.Adapter<ViewHolder>() {
 
@@ -20,7 +20,7 @@ class OffersRecyclerViewAdapter : RecyclerView.Adapter<ViewHolder>() {
 
     override fun getItemViewType(position: Int): Int {
 
-        return if(list[position] is DataX){
+        return if(list[position] is ProductsItem){
             1
         }else{
             0
@@ -55,9 +55,9 @@ class OffersRecyclerViewAdapter : RecyclerView.Adapter<ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        if(list[position] is DataX){
+        if(list[position] is ProductsItem){
             val itemHolder :OffersViewHolder = holder as OffersViewHolder
-            itemHolder.bind(list[position] as DataX)
+            itemHolder.bind(list[position] as ProductsItem)
 
 
         }else{

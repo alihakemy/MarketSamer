@@ -260,4 +260,9 @@
     <string name="my_orderss">my Orders</string>
     <string name="profile">profile</string>
     <string name="searchs">search</string>
+    <string name="Congratulations">Congratulations</string>
+    <string name="gotoCart">Go To My Cart</string>
+    <string name="det">Details</string>
+    <string name="gotoShopping">go To Shopping</string>
+    <string name="emptyCart">Empty Cart </string>
 </resources>

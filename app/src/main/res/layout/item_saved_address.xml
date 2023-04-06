@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_item_address"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_6sdp"
+    app:cardCornerRadius="@dimen/_6sdp"
+    app:cardElevation="@dimen/_4sdp"
+    app:strokeColor="#44A3D8"
+    app:strokeWidth="@dimen/_1sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/address_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_5sdp"
+            tools:ignore="ImageContrastCheck"
+            tools:layout_editor_absoluteX="13dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:drawableStart="@drawable/ic_black_pin"
+            android:drawablePadding="@dimen/_6sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/changa_bold"
+            android:maxLines="1"
+            android:text="@string/name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toStartOf="@id/tv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/changa_medium"
+            android:text="@string/edit"
+            android:textColor="#44A3D8"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/changa"
+            android:maxLines="1"
+            android:text="@string/name"
+            android:textAlignment="viewStart"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintEnd_toStartOf="@id/tv_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/changa"
+            android:text="@string/_965_6479_46464"
+            android:textSize="@dimen/_8ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_details" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6sdp"
+            android:src="@drawable/ic_rounded_orange_bin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

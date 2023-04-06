@@ -14,6 +14,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.hakemy.marketsamer.R
 import com.hakemy.marketsamer.base.BaseActivity
 import com.hakemy.marketsamer.databinding.ActivityMainBinding
+import com.hakemy.marketsamer.ui.cart.CartActivity
 import com.hakemy.marketsamer.utils.LocaleHelper
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.SharePreferenceManager
@@ -45,6 +46,9 @@ class MainActivity : BaseActivity() {
 
         navView.setupWithNavController(navController)
 
+        binding.imageView3.setOnClickListener {
+            CartActivity.startCartActivity(this)
+        }
 
 
     }

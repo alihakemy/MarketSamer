@@ -7,6 +7,12 @@ import com.hakemy.marketsamer.R
 import com.hakemy.marketsamer.databinding.ItemProductMainScreenBinding
 import com.hakemy.marketsamer.databinding.OfferItemBinding
 import com.hakemy.marketsamer.ui.home.entities.response.Product
+import com.hakemy.marketsamer.ui.register.RegisterActivity
+import com.hakemy.marketsamer.utils.SharePreferenceManager
+import com.hakemy.marketsamer.utils.services.RetrofitService
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 class OffersViewHolderMainScreen (val binding :ItemProductMainScreenBinding):RecyclerView.ViewHolder(binding.root) {
@@ -27,7 +33,23 @@ class OffersViewHolderMainScreen (val binding :ItemProductMainScreenBinding):Rec
 
         }
         binding.imageView5.setOnClickListener {
-            binding.imageView5.setImageResource(com.hakemy.marketsamer.R.drawable.likes)
+            if(SharePreferenceManager.getIsVerified().not()){
+                RegisterActivity.startRegisterActivity(it.context)
+
+                return@setOnClickListener
+            }
+            if(dataX.isFavourite){
+                dataX.isFavourite=false
+                binding.imageView5.setImageResource(com.hakemy.marketsamer.R.drawable.group_7565)
+
+            }else{
+                dataX.isFavourite=true
+                binding.imageView5.setImageResource(com.hakemy.marketsamer.R.drawable.likes)
+
+            }
+            CoroutineScope(Dispatchers.IO).launch {
+                kotlin.runCatching { RetrofitService.servicesApi().isFavorite(dataX.id.toString()) }
+            }
         }
 
     }

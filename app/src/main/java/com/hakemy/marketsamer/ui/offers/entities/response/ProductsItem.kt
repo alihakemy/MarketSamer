@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 import androidx.annotation.Keep
 
 @Keep
-data class DataX(
+data class ProductsItem(
     @SerializedName("discount")
     val discount: String, // 3.000
     @SerializedName("feature")
@@ -15,7 +15,7 @@ data class DataX(
     @SerializedName("image_path")
     val imagePath: String, // https://sharwa.masharia.co/storage/images/mainProduct/plQKhA9Ixodz6RbayjroPN7CFI6FA9clyKT3mcGD.jpg
     @SerializedName("is_favourite")
-    val isFavourite: Boolean, // false
+    var isFavourite: Boolean, // false
     @SerializedName("mainprice")
     val mainprice: String, // 80.000
     @SerializedName("minorder")

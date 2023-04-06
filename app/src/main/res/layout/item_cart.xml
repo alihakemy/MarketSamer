@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_6sdp"
+    app:cardElevation="@dimen/_6sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="@dimen/_6sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_trash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_black_grey_trash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/iv_images"
+            android:layout_width="114dp"
+            android:layout_height="139dp"
+            android:scaleType="centerCrop"
+            android:src="@color/color_gold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/_6sdp"
+            tools:ignore="ImageContrastCheck" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_4sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/iv_images"
+            app:layout_constraintEnd_toStartOf="@id/iv_trash"
+            app:layout_constraintStart_toEndOf="@id/iv_images"
+            app:layout_constraintTop_toTopOf="@id/iv_images">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/cairo_bold"
+                android:maxLines="1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_black"
+                android:textSize="20sp"
+                tools:ignore="TextContrastCheck"
+                tools:text="name" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/changa"
+                    android:text="@string/quantity"
+                    android:textColor="@color/color_dark_grey"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="TextContrastCheck" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/changa"
+                    android:text="@string/det"
+                    android:textColor="@color/color_dark_grey"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/changa"
+                    android:text="20"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView4"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView4"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView4" />
+
+                <TextView
+                    android:id="@+id/qty2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/changa"
+                    android:text="بلاستك"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView5"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView4"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:fontFamily="@font/cairo_semi_bold"
+            android:textAlignment="viewStart"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ln_quantity"
+            app:layout_constraintStart_toStartOf="@id/iv_images"
+            app:layout_constraintTop_toTopOf="@+id/ln_quantity"
+            tools:text="500 d.k" />
+
+        <LinearLayout
+            android:id="@+id/ln_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@drawable/shape_6_dark_grey_border_rounded"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_price">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_inc_quantity"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_white_add_btn"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_quantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/cairo_bold"
+                android:text="@string/five"
+                android:textAlignment="center"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/_10ssp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_dec_quantity"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_whte_minus_btn"
+                tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
