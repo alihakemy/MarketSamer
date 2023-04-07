@@ -47,15 +47,14 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
 
             when (val result = it) {
                 is ResultState.Error -> {
-                    progressDialog.dismiss()
+                  hideProgress()
                 }
                 ResultState.Loading -> {
-                    progressDialog.show()
+                   showProgress()
 
                 }
                 is ResultState.Success -> {
-                    progressDialog.dismiss()
-
+hideProgress()
                     result.data.data?.user?.let {
                             it1 -> SharePreferenceManager.storeUserObject(it1)
                         SharePreferenceManager.storeToken(result.data.data.token)

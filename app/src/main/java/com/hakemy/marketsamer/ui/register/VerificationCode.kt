@@ -73,17 +73,16 @@ class VerificationCode :
 
             when(val result=it){
                 is ResultState.Error ->{
-                    progressDialog.dismiss()
+                 hideProgress()
                 }
                 ResultState.Loading -> {
-                    progressDialog.show()
+                  showProgress()
 
                 }
                 is ResultState.Success -> {
-                    progressDialog.dismiss()
-
+              hideProgress()
                     result.data.data?.let {
-                        progressDialog.dismiss()
+                      hideProgress()
                         SharePreferenceManager.storeIsVerified(true)
                         MainActivity.startMainActivity(requireActivity())
                         requireActivity().finish()

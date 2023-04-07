@@ -2,8 +2,6 @@ package com.hakemy.marketsamer.ui.cart
 
 import android.content.Context
 import android.content.Intent
-import android.net.wifi.WifiManager
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
@@ -19,7 +17,6 @@ import com.hakemy.marketsamer.databinding.ActivityCartBinding
 import com.hakemy.marketsamer.ui.cart.adapter.CartAdapter
 import com.hakemy.marketsamer.ui.cart.models.CartItemProduct
 import com.hakemy.marketsamer.ui.chooseAddresse.ChooseAddressActivity
-import com.hakemy.marketsamer.ui.showProduct.ShowProductActivity
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.getMacAddr
 import kotlinx.coroutines.launch
@@ -87,7 +84,7 @@ class CartActivity : BaseActivity(), CartAdapter.RecycleListener {
 
                         binding.btnConfirm.setOnClickListener {
                             if (cartAdapter.itemCount > 0) {
-                                ChooseAddressActivity.startChooseAddressActivity(this,result.data.data?.total.toString())
+                                ChooseAddressActivity.startChooseAddressActivity(this,result.data.data?.total.toString(),orderId)
                             }
                         }
                     }.onFailure {

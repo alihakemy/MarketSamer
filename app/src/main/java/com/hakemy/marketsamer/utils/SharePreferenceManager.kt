@@ -72,7 +72,12 @@ object SharePreferenceManager {
 
     }
 
+    fun getUser(): User {
+        val gson = Gson()
+        val json: String = sharedPreferences?.getString("userData","").toString()
+       return gson.fromJson(json, User::class.java)
 
+    }
 
 
 

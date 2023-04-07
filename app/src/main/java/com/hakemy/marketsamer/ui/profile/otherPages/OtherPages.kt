@@ -5,6 +5,8 @@ import android.os.Bundle
 import com.hakemy.marketsamer.databinding.ActivityOtherPagesBinding
 
 class OtherPages : AppCompatActivity() {
+
+
     lateinit var binding:ActivityOtherPagesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

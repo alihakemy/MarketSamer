@@ -13,6 +13,7 @@ import com.hakemy.marketsamer.databinding.ActivityChooseAddressBinding
 import com.hakemy.marketsamer.ui.addAddress.AddAddress
 import com.hakemy.marketsamer.ui.chooseAddresse.response.AddressItem
 import com.hakemy.marketsamer.ui.editeAddresse.EditeAddresseActivity
+import com.hakemy.marketsamer.ui.reViewOrder.ReViewOrderActivity
 import com.hakemy.marketsamer.ui.register.RegisterActivity
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.SharePreferenceManager
@@ -25,7 +26,7 @@ class ChooseAddressActivity : BaseActivity(), SavedAddressesAdapter.RecycleListe
 
     companion object {
 
-        fun startChooseAddressActivity(context: Context,totolPrice:String) {
+        fun startChooseAddressActivity(context: Context, totolPrice: String, orderId: String) {
             if (SharePreferenceManager.getIsVerified().not()) {
                 RegisterActivity.startRegisterActivity(context)
 
@@ -34,6 +35,8 @@ class ChooseAddressActivity : BaseActivity(), SavedAddressesAdapter.RecycleListe
             val intent = Intent(context, ChooseAddressActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             intent.putExtra("totolPrice",totolPrice)
+            intent.putExtra("orderId",orderId)
+
             context.startActivity(intent)
 
         }
@@ -97,7 +100,7 @@ class ChooseAddressActivity : BaseActivity(), SavedAddressesAdapter.RecycleListe
         AwesomeDialog.build(this)
             .title(getString(R.string.Congratulations))
             .onPositive(getString(R.string.next)) {
-
+                ReViewOrderActivity.startReViewOrderActivity(this,intent.getStringExtra("orderId"))
             }
 
 

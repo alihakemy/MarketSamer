@@ -174,7 +174,7 @@
     <string name="to_cart">الى السلة</string>
     <string name="go_to_cart">الذهاب للسلة</string>
     <string name="go_to_shop">اكمل التسوق</string>
-    <string name="confirm_order">تأكيد الطلب</string>
+    <string name="confirm_order">مراجعة واتمام الطلب</string>
     <string name="total">المجموع</string>
     <string name="cart">سلة التسوق</string>
     <string name="choices_colon">الاختيارات :</string>
@@ -250,5 +250,15 @@
     <string name="det">الخصائص : </string>
     <string name="gotoShopping">اذهب الى التسوق</string>
     <string name="emptyCart">السله فارغه</string>
+    <string name="addressess">عنوان التوصيل المختار</string>
+    <string name="coupoune">لديك كوبون؟ وفر الان</string>
+    <string name="enterboune">قم بأدخال الكوبون</string>
+    <string name="applys">تطبيق</string>
+    <string name="oderssss">اتمام الطلب</string>
+    <string name="reorder">اعادة الطلب</string>
+    <string name="date">التاريخ</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="weHappy">نحن سعداء لتلقي استفسارتكم واقتراحاتكم</string>
+    <string name="Done">تم</string>
 
 </resources>

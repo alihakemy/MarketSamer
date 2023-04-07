@@ -6,11 +6,14 @@ import com.hakemy.marketsamer.ui.cart.models.CartResponse
 import com.hakemy.marketsamer.ui.chooseAddresse.response.AddressItem
 import com.hakemy.marketsamer.ui.favList.IsFavouriteResponse
 import com.hakemy.marketsamer.ui.home.entities.response.MainScreenResponse
+import com.hakemy.marketsamer.ui.myOrders.models.MyOrderResponse
 import com.hakemy.marketsamer.ui.offers.entities.response.OffersResponse
 import com.hakemy.marketsamer.ui.offers.entities.response.Products
 import com.hakemy.marketsamer.ui.onboarding.servicesModels.OnboardingModel
+import com.hakemy.marketsamer.ui.profile.contactUs.models.ContactUsResponse
 import com.hakemy.marketsamer.ui.profile.editePersonalData.UserDataResponse
 import com.hakemy.marketsamer.ui.profile.notification.model.NotificationsResponse
+import com.hakemy.marketsamer.ui.reViewOrder.model.ReviewOrderResponse
 import com.hakemy.marketsamer.ui.register.serviceModel.CreateNewAccountRequest
 import com.hakemy.marketsamer.ui.register.serviceModel.LoginRequest
 import com.hakemy.marketsamer.ui.register.serviceModel.ResetPasswordRequest
@@ -21,19 +24,41 @@ import com.hakemy.marketsamer.ui.register.serviceModel.response.resetPassword.Re
 import com.hakemy.marketsamer.ui.showProduct.entities.ProductDetailsResponse
 import retrofit2.http.*
 
+const val PHONE = "phone"
+const val PASSWORD = "password"
+const val DEVICE_ID = "device_id"
+const val DEVICE_TYPE = "device_type"
+const val TYPE_ANDROID = "android"
+const val EMAIL = "email"
+const val MSG = "message"
+const val NAME = "name"
+const val AVATAR = "avatar"
+const val CODE = "code"
+const val LAT = "lat"
+const val LNG = "long"
+const val ADDRESS = "address"
+const val PAGE = "page"
+const val COUNTRY_CODE = "country_code"
+
+const val USER_TYPE = "memberable_type"
+const val USER_ID = "memberable_id"
+const val CATEGORY_ID = "category_id"
+const val COMPANY_ID = "company_id"
+const val PRODUCT_ID = "product_id"
 const val ADDRESS_ID = "address_id"
+const val ORDER_ID = "order_id"
 
 interface ApiService {
 
 
     @GET("landing_board")
-    suspend fun onBoarding():OnboardingModel
+    suspend fun onBoarding(): OnboardingModel
 
     @POST("register")
     suspend fun register(@Body createNewAccountRequest: CreateNewAccountRequest): CreateNewAccountResponse
 
     @POST("verificationPhone")
-    suspend fun verificationPhone(@Body verificationCode: VerificationPhoneRequest):com.hakemy.marketsamer.ui.register.serviceModel.response.verificationCode.VerificationCode
+    suspend fun verificationPhone(@Body verificationCode: VerificationPhoneRequest): com.hakemy.marketsamer.ui.register.serviceModel.response.verificationCode.VerificationCode
 
     @POST("login")
     suspend fun login(@Body loginRequest: LoginRequest): LoginResponse
@@ -48,14 +73,13 @@ interface ApiService {
     suspend fun productFromCategory(@Path("id") id: String): OffersResponse
 
 
-
     @GET("mainPage")
     suspend fun mainPage(): MainScreenResponse
 
 
-
     @GET("product/{productId}")
     suspend fun productDetails(@Path("productId") id: String): ProductDetailsResponse
+
     @GET("search")
     suspend fun search(@Query("search") search: String): BaseResponse<Products>
 
@@ -74,7 +98,7 @@ interface ApiService {
 
     @POST("get/cart")
     suspend fun getCart(
-       @Body macAddress: HashMap<String,String>,
+        @Body macAddress: HashMap<String, String>,
     ): CartResponse
 
     @FormUrlEncoded
@@ -93,6 +117,7 @@ interface ApiService {
 
     @GET(GOVERNMENTS)
     suspend fun governments(): BaseResponse<MutableList<GovernmentItem>>
+
     @FormUrlEncoded
     @POST(ADD_NEW_ADDRESS)
     suspend fun addAddress(
@@ -110,11 +135,13 @@ interface ApiService {
         @Field("information") information: String?,
         @Field("phone") phone: String
     ): BaseResponse<AddressItem>
+
     @FormUrlEncoded
     @POST(CHOOSE_ADDRESS)
     suspend fun chooseAddress(
         @Field("id") id: String,
     ): BaseResponse<Any?>
+
     @POST(DELETE_ADDRESS)
     suspend fun deleteAddress(@Query("id") id: Int): BaseResponse<Any?>
 
@@ -140,6 +167,7 @@ interface ApiService {
 
     @GET(NOTIFICATIONS)
     suspend fun notifications(): BaseResponse<NotificationsResponse>
+
     @GET(FAVOURITE_PAGE)
     suspend fun favouritesPage(): BaseResponse<Products>
 
@@ -151,4 +179,39 @@ interface ApiService {
         @Field("phone") phone: String,
         @Field("_method") method: String = "put"
     ): BaseResponse<UserDataResponse>
+
+
+    @FormUrlEncoded
+    @POST(SUBMIT_ORDER)
+    suspend fun submitOrder(
+        @Field("order_id") orderId: String,
+        @Field("payment_method") paymentMethod: String,
+        @Field("total_price") totalPrice: String,
+        @Field("payment_status") paymentStatus: String,
+        @Field("totaShippingCost") totalShippingCost: String,
+    ): com.hakemy.marketsamer.ui.reViewOrder.submitOrderModel.SubmitOrderResponse
+
+
+    @FormUrlEncoded
+    @POST(COUPONS)
+    suspend fun coupon(
+        @Field("order_id") orderId: String,
+        @Field("code") code: String,
+    ): BaseResponse<Int>
+
+    @FormUrlEncoded
+    @POST(CONFIRM_CART)
+    suspend fun confirmCart(
+        @Field("order_id") orderId: String,
+    ): ReviewOrderResponse
+
+
+    @GET("userOrder")
+    suspend fun userOrder(
+    ): MyOrderResponse
+
+    @POST("support")
+    suspend fun support(@Body map: HashMap<String, String>): ContactUsResponse
+
+
 }

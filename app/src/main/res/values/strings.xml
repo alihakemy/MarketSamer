@@ -265,4 +265,15 @@
     <string name="det">Details</string>
     <string name="gotoShopping">go To Shopping</string>
     <string name="emptyCart">Empty Cart </string>
+    <string name="addressess">delivery addresse</string>
+    <string name="coupoune">Coupoune</string>
+    <string name="enterboune">Enter the coupon</string>
+    <string name="applys">apply</string>
+    <string name="oderssss">Done</string>
+    <string name="reorder">ReOrder</string>
+    <string name="date">date</string>
+    <string name="contact_us">Contact Us </string>
+    <string name="weHappy">We are glad to receive your inquiries and suggestions</string>
+    <string name="Done">تم</string>
+    <string name="thanks">شكرا</string>
 </resources>

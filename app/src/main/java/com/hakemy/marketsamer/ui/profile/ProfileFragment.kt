@@ -10,6 +10,7 @@ import com.hakemy.marketsamer.R
 import com.hakemy.marketsamer.base.BaseFragment
 import com.hakemy.marketsamer.databinding.FragmentNotificationsBinding
 import com.hakemy.marketsamer.ui.main.MainActivity
+import com.hakemy.marketsamer.ui.profile.contactUs.ContactUsActivity
 import com.hakemy.marketsamer.ui.profile.editePersonalData.EditePersonalData
 import com.hakemy.marketsamer.ui.profile.favList.FavListActivity
 import com.hakemy.marketsamer.ui.profile.mySavedAddress.SaveAddressActivitySetting
@@ -68,6 +69,9 @@ class ProfileFragment :
 
         binding.callUs.tvTitle.text = getString(R.string.callus)
         binding.callUs.ivIcon.setImageResource(R.drawable.callus)
+        binding.callUs.tvTitle.setOnClickListener {
+            ContactUsActivity.startContactUsActivity(requireContext())
+        }
 
 
         viewLifecycleOwner.lifecycleScope.launch {

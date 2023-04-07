@@ -41,17 +41,17 @@ class ForgetPasswordFragment : BaseFragment<FragmentResetPasswordBinding>(
 
             when (val result = it) {
                 is ResultState.Error -> {
-                    progressDialog.dismiss()
+                 hideProgress()
                 }
                 ResultState.Loading -> {
-                    progressDialog.show()
+                   showProgress()
 
                 }
                 is ResultState.Success -> {
-                    progressDialog.dismiss()
+                    hideProgress()
 
                     result.data.data?.let {
-                        progressDialog.dismiss()
+                       hideProgress()
                         requireActivity().onBackPressed()
 
                     }

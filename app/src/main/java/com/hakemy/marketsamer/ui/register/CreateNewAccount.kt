@@ -43,19 +43,18 @@ class CreateNewAccount :
 
             when (val result = it) {
                 is ResultState.Error -> {
-                    progressDialog.dismiss()
+               hideProgress()
                 }
                 ResultState.Loading -> {
-                    progressDialog.show()
+                   showProgress()
                 }
                 is ResultState.Success -> {
-                    progressDialog.dismiss()
-
+                 hideProgress()
                     result.data.data?.user?.let { it1 -> SharePreferenceManager.storeUserObject(it1)
 
                         SharePreferenceManager.storeToken(result.data.data.token.toString())
                         SharePreferenceManager.storeVerificationCode(result.data.data.activationCode)
-                        progressDialog.dismiss()
+                       hideProgress()
                         findNavController().navigate(R.id.verificationCode)
                     }
 

@@ -43,14 +43,13 @@ class OffersFragment :
             when (val result = it) {
                 is ResultState.Error -> {
 
-                    progressDialog.dismiss()
+                  hideProgress()
                 }
                 ResultState.Loading -> {
-                    progressDialog.show()
+                    showProgress()
                 }
                 is ResultState.Success -> {
-                    progressDialog.dismiss()
-
+                   hideProgress()
 
                     adapter.list.clear()
 

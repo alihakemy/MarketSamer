@@ -93,6 +93,7 @@ dependencies {
     implementation "com.google.android.gms:play-services-places:15.0.1"
     implementation 'com.karumi:dexter:6.2.3'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.myfatoorah:myfatoorah:2.2.17'
 
 
 }
