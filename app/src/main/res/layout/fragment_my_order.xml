@@ -67,6 +67,8 @@
         android:fontFamily="@font/changa"
 
         android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:text="@string/my_previous_orders"
         app:layout_constraintBottom_toBottomOf="@+id/myOrder"
         app:layout_constraintStart_toEndOf="@+id/myOrder"
@@ -82,6 +84,8 @@
         android:background="@drawable/blue_order"
         android:fontFamily="@font/changa"
         android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         android:text="@string/my_current_orders"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"

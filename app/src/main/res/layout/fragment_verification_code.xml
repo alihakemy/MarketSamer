@@ -96,17 +96,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_2sdp"
-            android:fontFamily="@font/changa"
+            android:fontFamily="@font/changa_bold"
             android:text="@string/_00_30"
             android:textColor="#44A3D8"
             android:textSize="@dimen/_12ssp"
             tools:ignore="TextContrastCheck" />
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/resend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_2sdp"
-            android:fontFamily="@font/changa"
+            android:fontFamily="@font/changa_bold"
             android:text="@string/second"
             android:textColor="#44A3D8"
             android:textSize="@dimen/_12ssp"

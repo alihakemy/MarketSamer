@@ -13,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import com.akexorcist.localizationactivity.ui.LocalizationActivity
 import com.hakemy.marketsamer.R
 import com.hakemy.marketsamer.utils.LocaleHelper
+import com.hakemy.marketsamer.utils.SharePreferenceManager
 import java.util.*
 
 
@@ -21,8 +22,14 @@ abstract class BaseActivity : LocalizationActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        lifecycleScope.launchWhenCreated {
-            setLanguage(Locale(BaseApp.Languages.ARABIC))
+        lifecycleScope.launchWhenStarted {
+            if(SharePreferenceManager.getLang().equals("ar")){
+                setLanguage(Locale(BaseApp.Languages.ARABIC))
+
+            }else{
+                setLanguage(Locale(BaseApp.Languages.ENGLISH))
+
+            }
         }
         dialog = AlertDialog.Builder(this).create()
         val inflate = LayoutInflater.from(this).inflate(R.layout.progress, null)

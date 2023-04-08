@@ -114,6 +114,16 @@ object SharePreferenceManager {
     }
 
 
+    fun storeLang (lang:String){
+        sharedPreferences?.edit()?.putString("Lang",lang)?.apply()
+
+    }
+    fun getLang(): String? {
+        return sharedPreferences?.getString("Lang", "ar")
+
+    }
+
+
 
 
 }

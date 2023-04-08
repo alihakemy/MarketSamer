@@ -25,7 +25,7 @@ object RetrofitService {
                         val newRequest: Request = chain.request().newBuilder()
                             .addHeader("Accept", "application/json")
                             .addHeader("Content-Type", "application/json")
-                            .addHeader("Accept-Language", "ar")
+                            .addHeader("Accept-Language", SharePreferenceManager.getLang().toString())
                             .addHeader("Authorization", "Bearer ${SharePreferenceManager.getToken()}")
                             .build()
                          chain.proceed(newRequest)

@@ -25,14 +25,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/cairo_black"
-                android:text="@string/welcome_back"
-                android:textColor="#44A3D8"                android:textSize="@dimen/_18ssp"
-                tools:ignore="TextContrastCheck" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/cairo_black"
                 android:text="@string/sign_up"
                 android:textColor="@color/color_black"
                 android:textSize="@dimen/_18ssp" />

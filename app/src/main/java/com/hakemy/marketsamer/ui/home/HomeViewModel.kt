@@ -17,11 +17,9 @@ class HomeViewModel : ViewModel() {
         get() = _getMainScreen
 
 
-    init {
-        getMainScreen()
-    }
 
-    private fun getMainScreen() {
+
+     fun getMainScreen() {
 
         _getMainScreen.postValue(ResultState.Loading)
         viewModelScope.launch {

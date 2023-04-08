@@ -102,6 +102,17 @@
 
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp" />
+
+            <TextView
+                android:id="@+id/button"
+                android:layout_width="60dp"
+                android:background="@drawable/rect"
+
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/_16sdp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Ar" />
         </LinearLayout>
     </ScrollView>
 

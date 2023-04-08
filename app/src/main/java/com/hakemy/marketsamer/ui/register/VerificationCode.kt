@@ -1,13 +1,11 @@
 package com.hakemy.marketsamer.ui.register
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.os.CountDownTimer
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.hakemy.marketsamer.BuildConfig
 import com.hakemy.marketsamer.R
 import com.hakemy.marketsamer.base.BaseFragment
@@ -17,6 +15,9 @@ import com.hakemy.marketsamer.ui.register.serviceModel.VerificationPhoneRequest
 import com.hakemy.marketsamer.ui.register.viewModel.RegisterViewModel
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.SharePreferenceManager
+import com.hakemy.marketsamer.utils.services.RetrofitService
+import kotlinx.coroutines.launch
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,7 +60,7 @@ class VerificationCode :
                     viewModel.verificationCode(
                         VerificationPhoneRequest(
                             phone =
-                            result.data.phone.toString().replace("+965",""),
+                            result.data.phone.toString().replace("+965", ""),
                             binding.otpCode.otp.toString()
                         )
                     )
@@ -71,18 +72,18 @@ class VerificationCode :
 
         viewModel.verificationCode.observe(this, Observer {
 
-            when(val result=it){
-                is ResultState.Error ->{
-                 hideProgress()
+            when (val result = it) {
+                is ResultState.Error -> {
+                    hideProgress()
                 }
                 ResultState.Loading -> {
-                  showProgress()
+                    showProgress()
 
                 }
                 is ResultState.Success -> {
-              hideProgress()
+                    hideProgress()
                     result.data.data?.let {
-                      hideProgress()
+                        hideProgress()
                         SharePreferenceManager.storeIsVerified(true)
                         MainActivity.startMainActivity(requireActivity())
                         requireActivity().finish()
@@ -94,7 +95,43 @@ class VerificationCode :
 
         })
 
+        timer()
+        binding.resend.setOnClickListener {
 
+            lifecycleScope.launch {
+
+                val map=HashMap<String,String>()
+                map.put("phone",SharePreferenceManager.getUser().phone.toString().replace("+965", ""))
+                map.put("type","phone")
+                kotlin.runCatching {
+                    RetrofitService.servicesApi().resend(map)
+                }
+
+            }
+            timer()
+
+        }
+
+    }
+
+    fun timer() {
+        binding.resend.text = getString(R.string.second)
+
+        object : CountDownTimer(30000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                kotlin.runCatching {
+                    binding.tvCountDown.text = (millisUntilFinished / 1000).toString()
+                }
+
+            }
+
+            override fun onFinish() {
+                kotlin.runCatching {
+                    binding.resend.text = getString(R.string.send)
+
+                }
+            }
+        }.start()
 
     }
 

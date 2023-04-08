@@ -43,8 +43,7 @@
                         xmlns:tools="http://schemas.android.com/tools"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
 
                         app:cardCornerRadius="16dp"
                         app:strokeWidth="1dp">
@@ -77,7 +76,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableEnd="@drawable/next"
+                        android:drawableEnd="@drawable/asdasd"
                         android:drawablePadding="8dp"
                         android:fontFamily="@font/changa_bold"
                         android:text="@string/showAll"
@@ -147,7 +146,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/showAll"
                         android:fontFamily="@font/changa_bold"
-                        android:drawableEnd="@drawable/next"
+                        android:drawableEnd="@drawable/asdasd"
                         android:drawablePadding="8dp"
                         android:textColor="#44A3D8"
                         android:textSize="@dimen/_14ssp"
@@ -182,8 +181,7 @@
                         xmlns:tools="http://schemas.android.com/tools"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
 
                         app:cardCornerRadius="16dp"
                         app:strokeWidth="1dp">
@@ -215,14 +213,37 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_10sdp">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_4sdp"
-                        android:fontFamily="@font/changa_bold"
-                        android:text="@string/best_offers"
-                        android:textColor="@color/color_black"
-                        android:textSize="@dimen/_14ssp" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/changa_bold"
+                            android:text="@string/best_offers"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/appCompatTextView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/asdasd"
+                            android:drawablePadding="8dp"
+                            android:fontFamily="@font/changa_bold"
+                            android:text="@string/showAll"
+                            android:textColor="#44A3D8"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rv_our_choice"

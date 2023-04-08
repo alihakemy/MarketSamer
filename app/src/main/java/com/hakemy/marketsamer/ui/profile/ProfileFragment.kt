@@ -35,6 +35,23 @@ class ProfileFragment :
         binding.notification.tvTitle.setOnClickListener {
             NotificationActivity.startNotificationActivity(requireContext())
         }
+        if (SharePreferenceManager.getLang().equals("ar")) {
+            binding.button.text = "en"
+        } else {
+            binding.button.text = "ar"
+        }
+        binding.button.setOnClickListener {
+            if (SharePreferenceManager.getLang().equals("ar")) {
+                binding.button.text = "en"
+                SharePreferenceManager.storeLang("en")
+            } else {
+                binding.button.text = "ar"
+                SharePreferenceManager.storeLang("ar")
+
+            }
+            MainActivity.startMainActivity(requireActivity())
+        }
+
 
         binding.fav.tvTitle.text = getString(R.string.fav)
         binding.fav.ivIcon.setImageResource(R.drawable.fav)

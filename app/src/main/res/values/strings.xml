@@ -249,11 +249,11 @@
     <string name="terms">Terms and conditions</string>
     <string name="callus">call us</string>
     <string name="login">login</string>
-    <string name="sections">الأقسام</string>
-    <string name="fav_offers">عروضنا المفضلة</string>
-    <string name="best_offers">افضل عروض الأكواب</string>
-    <string name="more">المزيد</string>
-    <string name="showAll">عرض الكل</string>
+    <string name="sections">Sections</string>
+    <string name="fav_offers">Fav Offers</string>
+    <string name="best_offers">Cups Offers</string>
+    <string name="more">More</string>
+    <string name="showAll">Show All</string>
     <string name="KWD">KWD</string>
     <string name="main_screen">main screen</string>
     <string name="offers">offers</string>
@@ -275,5 +275,5 @@
     <string name="contact_us">Contact Us </string>
     <string name="weHappy">We are glad to receive your inquiries and suggestions</string>
     <string name="Done">تم</string>
-    <string name="thanks">شكرا</string>
+    <string name="thanks">Thanks</string>
 </resources>

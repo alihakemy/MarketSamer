@@ -231,4 +231,8 @@ interface ApiService {
     @POST("cancel/shipment")
     suspend fun cancelOrderReasons(@Body map :HashMap<String,String>): CancelOrderResponse
 
+
+    @POST("resend")
+    suspend fun  resend(@Body map :HashMap<String,String>):Any
+
 }

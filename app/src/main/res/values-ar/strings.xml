@@ -51,7 +51,7 @@
     <string name="password">كلمة المرور</string>
     <string name="forget_password">نسيت كلمة المرور؟</string>
     <string name="have_no_account">ليس لديك حساب ؟</string>
-    <string name="sign_up">تسجيل جديد</string>
+    <string name="sign_up">انشاء حساب</string>
     <string name="confirm_phone_number">تأكيد رقم الجوال</string>
     <string name="confirm_header_desc">تحتاج الى ادخال رمز مكون من 4 ارقام تم ارساله الى رقم</string>
     <string name="confirm">تأكيد</string>
