@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
         android:background="@drawable/shape_rounded_gold"
-        android:fontFamily="@font/cairo_semi_bold"
+        android:fontFamily="@font/changa"
         android:text="@string/choose_location"
         android:textColor="@color/color_white"
         android:textSize="@dimen/_12ssp"

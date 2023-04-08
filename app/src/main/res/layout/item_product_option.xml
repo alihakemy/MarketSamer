@@ -23,7 +23,7 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/cairo_regular"
+            android:fontFamily="@font/changa"
             android:text="@string/choose_size"
             android:textColor="@color/color_black"
             android:textSize="14sp" />
@@ -36,7 +36,7 @@
             android:layout_weight="1"
             android:ellipsize="end"
             android:textAlignment="viewStart"
-            android:fontFamily="@font/cairo_regular"
+            android:fontFamily="@font/changa"
             android:textColor="@color/color_orange"
             android:textSize="14sp" />
 

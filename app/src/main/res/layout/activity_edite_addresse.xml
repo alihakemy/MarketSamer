@@ -27,7 +27,7 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/cairo_bold"
+            android:fontFamily="@font/changa_bold"
             android:textSize="@dimen/_16ssp"
             android:textColor="@color/color_black"
             android:layout_marginStart="@dimen/_10sdp"
@@ -73,7 +73,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableEnd="@drawable/ic_orange_location"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:padding="@dimen/_10sdp"
                         android:text="@string/choose_your_location_on_map"
                         android:textColor="@color/color_black"
@@ -87,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:fontFamily="@font/cairo_medium"
+                android:fontFamily="@font/changa"
                 android:text="@string/address_details"
                 android:textColor="@color/color_black"
                 android:textSize="@dimen/_12ssp" />
@@ -144,7 +144,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/address_name"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -155,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="text"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -177,7 +177,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/government"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -188,7 +188,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="text"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -210,7 +210,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/area"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -221,7 +221,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="text"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -243,7 +243,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/district"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -254,7 +254,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="text"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -276,7 +276,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/street"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -287,7 +287,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="text"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -318,7 +318,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/building"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -329,7 +329,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="number"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -351,7 +351,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/floor"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -362,7 +362,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="number"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -392,7 +392,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/alley"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -404,7 +404,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="number"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -426,7 +426,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/building"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -437,7 +437,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="number"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -459,7 +459,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/floor"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -470,7 +470,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="number"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -492,7 +492,7 @@
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/flat_number"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp" />
@@ -503,7 +503,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_regular"
+                        android:fontFamily="@font/changa"
                         android:inputType="number"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_8ssp"
@@ -536,7 +536,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_4sdp"
                         android:background="@color/color_white"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:hint="@string/extra_instructions"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_12ssp"
@@ -564,7 +564,7 @@
                         android:background="@color/color_white"
                         android:drawableStart="@drawable/ic_phone"
                         android:drawablePadding="@dimen/_6sdp"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:hint="@string/phone_number"
                         android:inputType="phone"
                         android:textAlignment="viewStart"
@@ -576,7 +576,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="@dimen/_4sdp"
-                        android:fontFamily="@font/cairo_light"
+                        android:fontFamily="@font/changa"
                         android:text="@string/_965"
                         android:textColor="@color/color_orange"
                         android:textSize="@dimen/_12ssp" />
@@ -604,7 +604,7 @@
             android:background="@drawable/shape_rounded_gold"
             android:drawableEnd="@drawable/ic_rounded_arrow_right"
             android:drawablePadding="@dimen/_6sdp"
-            android:fontFamily="@font/cairo_semi_bold"
+            android:fontFamily="@font/changa"
             android:paddingHorizontal="@dimen/_16sdp"
             android:text="@string/save_address"
             android:textAlignment="viewStart"

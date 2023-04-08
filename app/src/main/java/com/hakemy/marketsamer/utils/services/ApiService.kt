@@ -10,6 +10,8 @@ import com.hakemy.marketsamer.ui.myOrders.models.MyOrderResponse
 import com.hakemy.marketsamer.ui.offers.entities.response.OffersResponse
 import com.hakemy.marketsamer.ui.offers.entities.response.Products
 import com.hakemy.marketsamer.ui.onboarding.servicesModels.OnboardingModel
+import com.hakemy.marketsamer.ui.orderDetails.Model.OrderDetailsResponse
+import com.hakemy.marketsamer.ui.orderDetails.responseOfCancel.CancelOrderResponse
 import com.hakemy.marketsamer.ui.profile.contactUs.models.ContactUsResponse
 import com.hakemy.marketsamer.ui.profile.editePersonalData.UserDataResponse
 import com.hakemy.marketsamer.ui.profile.notification.model.NotificationsResponse
@@ -213,5 +215,14 @@ interface ApiService {
     @POST("support")
     suspend fun support(@Body map: HashMap<String, String>): ContactUsResponse
 
+    @GET("Order-details/{id}")
+    suspend fun orderDetails(@Path("id") id: String): OrderDetailsResponse
+
+
+    @GET("cancel/orders")
+    suspend fun cancelOrderReasons(@Query("product_order_id") id: String): CancelOrderResponse
+
+    @POST("cancel/shipment")
+    suspend fun cancelOrderReasons(@Body map :HashMap<String,String>): CancelOrderResponse
 
 }

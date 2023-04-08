@@ -37,7 +37,7 @@
                 android:layout_marginStart="@dimen/_4sdp"
                 android:layout_weight="1"
                 android:background="@color/color_white"
-                android:fontFamily="@font/cairo_semi_bold"
+                android:fontFamily="@font/changa"
                 android:hint="@string/search_for_products"
                 android:textColor="@color/color_black"
                 android:textSize="@dimen/_10ssp"

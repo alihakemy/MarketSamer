@@ -7,16 +7,19 @@ import android.os.Bundle
 import com.hakemy.marketsamer.base.BaseActivity
 import com.hakemy.marketsamer.databinding.ActivityPaymentSuccessBinding
 import com.hakemy.marketsamer.ui.main.MainActivity
+import com.hakemy.marketsamer.ui.orderDetails.OrderDetailsActivity
 
 class PaymentSuccessActivity : BaseActivity() {
     companion object{
         fun startPaymentSuccessActivity(context: Context,orderNo:String,
-       totalPrice:String,paymentMethod:String){
+       totalPrice:String,paymentMethod:String,id:String){
             val intent=Intent(context,PaymentSuccessActivity::class.java)
             intent.flags=Intent.FLAG_ACTIVITY_NEW_TASK
             intent.putExtra("orderNo",orderNo)
             intent.putExtra("totalPrice",totalPrice)
             intent.putExtra("paymentMethod",paymentMethod)
+            intent.putExtra("id",id)
+
             context.startActivity(intent)
 
         }
@@ -35,7 +38,7 @@ class PaymentSuccessActivity : BaseActivity() {
         }
 
         binding.btnDetails.setOnClickListener {
-            TODO("not implemented")
+            OrderDetailsActivity.startOrderDetailsActivity(this,intent.getStringExtra("id").toString())
         }
 
     }

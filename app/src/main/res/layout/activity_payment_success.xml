@@ -37,7 +37,7 @@
             android:layout_weight="1"
             android:drawableStart="@drawable/ic_black_paper"
             android:drawablePadding="@dimen/_4sdp"
-            android:fontFamily="@font/cairo_semi_bold"
+            android:fontFamily="@font/changa"
             android:text="@string/order_number"
             android:textColor="@color/color_gold"
             android:textSize="@dimen/_12ssp" />
@@ -140,7 +140,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:background="@drawable/shape_24_rounded_bordered_gold"
         android:drawablePadding="@dimen/_6sdp"
-        android:fontFamily="@font/cairo_semi_bold"
+        android:fontFamily="@font/changa"
         android:gravity="center"
         android:paddingHorizontal="@dimen/_16sdp"
         android:text="@string/back_to_home"

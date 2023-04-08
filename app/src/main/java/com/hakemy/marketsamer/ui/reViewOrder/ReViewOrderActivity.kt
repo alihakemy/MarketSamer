@@ -95,7 +95,8 @@ class ReViewOrderActivity : BaseActivity() {
                         this,
                         orderNo = result.data?.data?.order_data?.order_number.toString(),
                         totalPrice = result.data?.data?.order_data?.total_price.toString(),
-                        paymentMethod = result.data?.data?.order_data?.payment_method.toString()
+                        paymentMethod = result.data?.data?.order_data?.payment_method.toString(),
+                        id=intent.getStringExtra("orderId").toString()
                     )
 
                 }
