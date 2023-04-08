@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Bunyan online</string>
+    <string name="app_name" translatable="false">Sharwaa</string>
     <string name="there_are_no_chats">There are no chats</string>
     <string name="text_ok">OK</string>
     <string name="text_cancel">Cancel</string>
@@ -276,4 +276,6 @@
     <string name="weHappy">We are glad to receive your inquiries and suggestions</string>
     <string name="Done">تم</string>
     <string name="thanks">Thanks</string>
+    <string name="Special">Special</string>
+    <string name="selectSize">Select Size..</string>
 </resources>

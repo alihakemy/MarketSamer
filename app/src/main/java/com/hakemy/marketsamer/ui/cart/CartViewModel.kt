@@ -42,7 +42,7 @@ class CartViewModel : ViewModel() {
             try {
 
                 val result = RetrofitService.servicesApi().editCart(toString,s)
-                getCart(getMacAddr(context))
+
 
             } catch (e: java.lang.Exception) {
             }

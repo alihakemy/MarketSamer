@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.hakemy.marketsamer.databinding.CategoryItemMainScreenBinding
 import com.hakemy.marketsamer.ui.home.entities.response.Category
+import com.hakemy.marketsamer.ui.home.moreProducts.MoreProducts
 
 class CategoryMainAdapter(private val context: Context) :
     RecyclerView.Adapter<CategoryMainAdapter.ViewHolder>() {
@@ -27,7 +28,10 @@ class CategoryMainAdapter(private val context: Context) :
         holder.itemBinding.tvName.text = category.name
 
             // listener
-        holder.itemBinding.lnItemCompany.setOnClickListener { }
+        holder.itemBinding.lnItemCompany.setOnClickListener {
+            MoreProducts.startMoreProducts(it.context,category.name.toString(),category.id.toString())
+
+        }
 
     }
 

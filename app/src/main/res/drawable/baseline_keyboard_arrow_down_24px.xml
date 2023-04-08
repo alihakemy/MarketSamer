@@ -1,0 +1,18 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="180"
+
+    android:toDegrees="180">
+
+
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="7dp"
+    android:height="11dp"
+    android:viewportWidth="7"
+    android:autoMirrored="true"
+    android:viewportHeight="11">
+  <path
+      android:pathData="M6.793,9.708L2.594,5.5L6.793,1.293L5.5,0L0,5.5L5.5,11L6.793,9.708Z"
+      android:fillColor="#9E9E9E"/>
+</vector>
+</rotate>

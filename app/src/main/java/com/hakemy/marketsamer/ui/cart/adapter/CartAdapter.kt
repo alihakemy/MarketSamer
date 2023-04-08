@@ -28,10 +28,10 @@ class CartAdapter(private val context: Context, private val listener: RecycleLis
         with(holder.itemBinding) {
             Glide.with(context).load(product.imagePath).into(ivImages)
             tvName.text = product.name
-            qty.text=product.quantity.toString()
+            qty.text = product.quantity.toString()
 
             kotlin.runCatching {
-                qty2.text=product.feature_product.first().feature_name
+                qty2.text = product.feature_product.first().feature_name
 
             }
 
@@ -40,10 +40,19 @@ class CartAdapter(private val context: Context, private val listener: RecycleLis
             // actions
             btnIncQuantity.setOnClickListener {
 
+                product.quantity = product.quantity.toString().toInt().plus(1).toString()
+                notifyDataSetChanged()
                 listener.onAddClicked(position, product)
 
             }
-            btnDecQuantity.setOnClickListener { listener.onMinusClicked(position, product) }
+            btnDecQuantity.setOnClickListener {
+                if (product.quantity.toString().toInt() > 1) {
+                    product.quantity = product.quantity.toString().toInt().minus(1).toString()
+                    notifyDataSetChanged()
+
+                    listener.onMinusClicked(position, product)
+                }
+            }
             ivTrash.setOnClickListener { listener.onDeleteClicked(position, product) }
         }
     }

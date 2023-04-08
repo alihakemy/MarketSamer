@@ -78,6 +78,7 @@
                         android:layout_height="wrap_content"
                         android:drawableEnd="@drawable/asdasd"
                         android:drawablePadding="8dp"
+                        android:id="@+id/moresection"
                         android:fontFamily="@font/changa_bold"
                         android:text="@string/showAll"
                         android:textColor="#44A3D8"

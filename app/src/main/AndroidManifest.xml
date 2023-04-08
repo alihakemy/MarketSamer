@@ -14,44 +14,75 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.MarketSamer"
         tools:replace="android:theme"
         tools:targetApi="31">
         <activity
+            android:name=".ui.showProduct.SpecialActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.moreSections.MoreSectionsActivity"
+            android:screenOrientation="portrait"
+
+            android:exported="false" />
+        <activity
             android:name=".ui.home.moreProducts.MoreProducts"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.orderDetails.OrderDetailsActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.profile.contactUs.ContactUsActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.paymentSuccess.PaymentSuccessActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.reViewOrder.ReViewOrderActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.profile.otherPages.OtherPages"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.profile.editePersonalData.EditePersonalData"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.profile.mySavedAddress.SaveAddressActivitySetting"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.profile.favList.FavListActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.profile.notification.NotificationActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.editeAddresse.EditeAddresseActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
 
         <uses-library
@@ -64,21 +95,33 @@
 
         <activity
             android:name=".ui.addAddress.getLocation.GetLocationActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.addAddress.AddAddress"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.cart.CartActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.chooseAddresse.ChooseAddressActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.search.SearchActivity"
+            android:screenOrientation="portrait"
+
             android:exported="false" />
         <activity
             android:name=".ui.showProduct.ShowProductActivity"
+            android:screenOrientation="portrait"
+
             android:exported="true">
 
             <!-- <intent-filter> -->
@@ -88,9 +131,13 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".ui.register.RegisterActivity" />
+        <activity android:name=".ui.register.RegisterActivity"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".ui.onboarding.OnboardingActivity"
+            android:screenOrientation="portrait"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -100,6 +147,8 @@
         </activity>
         <activity
             android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait"
+
             android:exported="true" />
 
         <meta-data

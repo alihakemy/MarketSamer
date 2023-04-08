@@ -8,6 +8,6 @@ data class CartItemProduct(
     val mainQuantity: String,
     val name: String,
     val price: String,
-    val quantity: String,
+    var quantity: String,
     val shipping_cost: String
 )

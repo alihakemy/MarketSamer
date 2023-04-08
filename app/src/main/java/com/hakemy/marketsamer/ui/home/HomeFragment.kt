@@ -13,6 +13,7 @@ import com.hakemy.marketsamer.ui.home.entities.response.Category
 import com.hakemy.marketsamer.ui.home.entities.response.ChooseU
 import com.hakemy.marketsamer.ui.home.entities.response.Product
 import com.hakemy.marketsamer.ui.home.moreProducts.MoreProducts
+import com.hakemy.marketsamer.ui.home.moreSections.MoreSectionsActivity
 import com.hakemy.marketsamer.ui.search.SearchActivity
 import com.hakemy.marketsamer.utils.ResultState
 import kotlinx.coroutines.launch
@@ -71,6 +72,9 @@ class HomeFragment :
 
         })
 
+        binding.moresection.setOnClickListener {
+            MoreSectionsActivity.startMoreSectionsActivity(requireContext())
+        }
         binding.iToolbar.layoutToolbar.setOnClickListener {
 
             SearchActivity.startSearchActivity(requireContext())

@@ -6,6 +6,7 @@ import com.hakemy.marketsamer.ui.cart.models.CartResponse
 import com.hakemy.marketsamer.ui.chooseAddresse.response.AddressItem
 import com.hakemy.marketsamer.ui.favList.IsFavouriteResponse
 import com.hakemy.marketsamer.ui.home.entities.response.MainScreenResponse
+import com.hakemy.marketsamer.ui.home.moreSections.model.MoreSectionResponse
 import com.hakemy.marketsamer.ui.myOrders.models.MyOrderResponse
 import com.hakemy.marketsamer.ui.offers.entities.response.OffersResponse
 import com.hakemy.marketsamer.ui.offers.entities.response.Products
@@ -234,5 +235,9 @@ interface ApiService {
 
     @POST("resend")
     suspend fun  resend(@Body map :HashMap<String,String>):Any
+
+    @GET("categories")
+    suspend fun  categories():MoreSectionResponse
+
 
 }
