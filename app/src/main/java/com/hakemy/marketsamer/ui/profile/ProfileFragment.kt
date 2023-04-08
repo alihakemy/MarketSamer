@@ -15,9 +15,11 @@ import com.hakemy.marketsamer.ui.profile.editePersonalData.EditePersonalData
 import com.hakemy.marketsamer.ui.profile.favList.FavListActivity
 import com.hakemy.marketsamer.ui.profile.mySavedAddress.SaveAddressActivitySetting
 import com.hakemy.marketsamer.ui.profile.notification.NotificationActivity
+import com.hakemy.marketsamer.ui.profile.otherPages.OtherPages
 import com.hakemy.marketsamer.ui.register.RegisterActivity
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.SharePreferenceManager
+import com.hakemy.marketsamer.utils.services.RetrofitService
 import kotlinx.coroutines.launch
 
 
@@ -75,10 +77,10 @@ class ProfileFragment :
 
 
         viewLifecycleOwner.lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.RESUMED){
+            repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 if (SharePreferenceManager.getIsVerified()) {
                     binding.appCompatTextView2.text = getString(R.string.logout)
-                    when(val results= SharePreferenceManager.getUserObject()){
+                    when (val results = SharePreferenceManager.getUserObject()) {
                         is ResultState.Error -> {
 
                         }
@@ -86,7 +88,7 @@ class ProfileFragment :
 
                         }
                         is ResultState.Success -> {
-                            binding.appCompatTextView.text=results.data.name.toString()
+                            binding.appCompatTextView.text = results.data.name.toString()
 
                         }
                     }
@@ -96,7 +98,7 @@ class ProfileFragment :
                     }
 
                 } else {
-                    binding.appCompatTextView.text=""
+                    binding.appCompatTextView.text = ""
 
                     binding.appCompatTextView2.text = getString(R.string.login)
                     binding.appCompatTextView2.setOnClickListener {
@@ -107,9 +109,40 @@ class ProfileFragment :
             }
         }
 
+        lifecycleScope.launch {
+
+            kotlin.runCatching {
+
+                val result = RetrofitService.servicesApi().getpage()
+
+                binding.terms.tvTitle.setOnClickListener {
+
+                    result.data.forEach {
+                        if (it.id == 1) {
+                            OtherPages.startOtherPages(requireContext(), it.name, it.content)
+                        }
+                    }
+
+                }
+
+                binding.policy.tvTitle.setOnClickListener {
+
+                    result.data.forEach {
+                        if (it.id == 2) {
+                            OtherPages.startOtherPages(requireContext(), it.name, it.content)
+                        }
+                    }
+
+                }
+
+
+            }
+
+        }
 
 
     }
+
     fun shareApp(context: Context) {
         val appPackageName: String = context.getPackageName()
         val sendIntent = Intent()

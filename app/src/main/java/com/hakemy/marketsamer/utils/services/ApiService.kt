@@ -15,6 +15,7 @@ import com.hakemy.marketsamer.ui.orderDetails.responseOfCancel.CancelOrderRespon
 import com.hakemy.marketsamer.ui.profile.contactUs.models.ContactUsResponse
 import com.hakemy.marketsamer.ui.profile.editePersonalData.UserDataResponse
 import com.hakemy.marketsamer.ui.profile.notification.model.NotificationsResponse
+import com.hakemy.marketsamer.ui.profile.otherPages.model.pagesResponse
 import com.hakemy.marketsamer.ui.reViewOrder.model.ReviewOrderResponse
 import com.hakemy.marketsamer.ui.register.serviceModel.CreateNewAccountRequest
 import com.hakemy.marketsamer.ui.register.serviceModel.LoginRequest
@@ -221,6 +222,11 @@ interface ApiService {
 
     @GET("cancel/orders")
     suspend fun cancelOrderReasons(@Query("product_order_id") id: String): CancelOrderResponse
+
+
+    @GET("getpage")
+    suspend fun getpage(): pagesResponse
+
 
     @POST("cancel/shipment")
     suspend fun cancelOrderReasons(@Body map :HashMap<String,String>): CancelOrderResponse
