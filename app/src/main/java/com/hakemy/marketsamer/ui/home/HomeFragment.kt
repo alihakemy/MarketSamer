@@ -2,6 +2,7 @@ package com.hakemy.marketsamer.ui.home
 
 import androidx.lifecycle.*
 import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
 import com.hakemy.marketsamer.R
 import com.hakemy.marketsamer.base.BaseFragment
@@ -54,6 +55,12 @@ class HomeFragment :
                     }
                     binding.imageSlider.setImageList(imageList)
 
+                    binding.imageSlider.setItemClickListener(object : ItemClickListener {
+                        override fun onItemSelected(position: Int) {
+                            MoreProducts.startMoreProducts(requireContext(),"",result.data.data.slider.get(position).id.toString())
+                            // You can listen here.
+                        }
+                        })
 
                     val imageList2 = ArrayList<SlideModel>()
                     result.data.data.banner.forEach {
@@ -62,6 +69,12 @@ class HomeFragment :
                     }
                     binding.slider2.setImageList(imageList2)
 
+                    binding.slider2.setItemClickListener(object : ItemClickListener {
+                        override fun onItemSelected(position: Int) {
+                            MoreProducts.startMoreProducts(requireContext(),"",result.data.data.slider.get(position).id.toString())
+                            // You can listen here.
+                        }
+                    })
                     setCategories(result.data.data.categories)
 
                     setProductRecyclerViewAdapterMainScreen(result.data.data.products)

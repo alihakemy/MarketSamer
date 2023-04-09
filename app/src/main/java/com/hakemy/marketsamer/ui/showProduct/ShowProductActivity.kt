@@ -57,9 +57,12 @@ class ShowProductActivity : BaseActivity() {
         viewModel =
             ViewModelProvider(this)[ShowProductViewModel::class.java]
 
+        binding.imageView10.setOnClickListener {
+            onBackPressed()
+        }
 
-//        viewModel.getProductDetails(intent.getStringExtra("productId").toString())
-        viewModel.getProductDetails("44")
+        viewModel.getProductDetails(intent.getStringExtra("productId").toString())
+//        viewModel.getProductDetails("44")
 
 
         viewModel.productDetails.observe(this, Observer {

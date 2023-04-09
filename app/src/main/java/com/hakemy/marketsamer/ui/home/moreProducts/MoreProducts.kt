@@ -46,7 +46,10 @@ class MoreProducts : BaseActivity() {
         binding.imageView6.setOnClickListener {
             onBackPressed()
         }
-        binding.appCompatTextView.text=intent.getStringExtra("title")
+        if(intent.getStringExtra("title").isNullOrEmpty().not()){
+            binding.appCompatTextView.text=intent.getStringExtra("title")
+
+        }
 
         categoriesAdapter = CategoriesRecyclerViewAdapter() {
             viewModel.getOffersWithCategories(it.id.toString())
