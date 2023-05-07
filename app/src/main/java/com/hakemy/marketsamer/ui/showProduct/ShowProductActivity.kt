@@ -108,8 +108,9 @@ class ShowProductActivity : BaseActivity() {
                     binding.productName.text = result.data.data.products.name.toString()
                     binding.someId.text = result.data.data.products.minorder.toString() + " قطعه "
 
+
                     binding.currentPri.text =
-                        result.data.data.products.prefitPrice.toString() + "د.ك"
+                        result.data.data.products.discount.toString() + "د.ك"
 
                     binding.listPrice.text = result.data.data.products.mainprice.toString() + "د.ك"
                     binding.listPrice.paintFlags =
