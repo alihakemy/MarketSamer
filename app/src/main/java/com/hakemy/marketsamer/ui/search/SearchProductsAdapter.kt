@@ -29,7 +29,7 @@ class SearchProductsAdapter(private val context: Context, private val listener: 
         val binding=holder.itemBinding
         Glide.with(binding.imageView5.context).load(productsItem.imagePath).into(binding.imageView7)
         binding.appCompatTextView.text=productsItem.name.toString()
-        binding.someId.text=productsItem.minorder.toString() +" "+ binding.someId.context.resources.getString(
+        binding.someId.text=productsItem.qty_name.toString() +" "+ binding.someId.context.resources.getString(
             R.string.cup)
         binding.price.text=productsItem.discount.toString() +binding.someId2.context.getString(R.string.KWD)
         binding.someId2.text=productsItem.mainprice.toString() +binding.someId2.context.getString(R.string.KWD)

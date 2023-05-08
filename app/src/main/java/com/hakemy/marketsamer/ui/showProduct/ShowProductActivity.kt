@@ -106,13 +106,13 @@ class ShowProductActivity : BaseActivity() {
                     setBestProductRecyclerViewAdapterMainScreen(result.data.data.productsRelation)
 
                     binding.productName.text = result.data.data.products.name.toString()
-                    binding.someId.text = result.data.data.products.minorder.toString() + " قطعه "
+                    binding.someId.text = result.data.data.products.qty_name.toString()
 
 
                     binding.currentPri.text =
-                        result.data.data.products.discount.toString() + "د.ك"
+                        result.data.data.products.discount.toString() + getString(R.string.KWD)
 
-                    binding.listPrice.text = result.data.data.products.mainprice.toString() + "د.ك"
+                    binding.listPrice.text = result.data.data.products.mainprice.toString()+ getString(R.string.KWD)
                     binding.listPrice.paintFlags =
                         binding.listPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
 

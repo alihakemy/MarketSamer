@@ -239,7 +239,7 @@
     <string name="bunyan_online" translatable="false">Bunyan online</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="cup">Pieceis</string>
+    <string name="cup">""</string>
     <string name="notification">notifications</string>
     <string name="fav">Favorite lists</string>
     <string name="address">Delivery addresses</string>

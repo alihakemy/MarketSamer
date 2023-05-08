@@ -24,4 +24,8 @@ data class ProductsRelation(
     val name: String, // ديكور غرف مودرن
     @SerializedName("prefitPrice")
     val prefitPrice: String // 96
+
+    ,
+
+    var  qty_name:String=""
 )

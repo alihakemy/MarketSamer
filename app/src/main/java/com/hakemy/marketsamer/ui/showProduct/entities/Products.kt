@@ -38,5 +38,7 @@ data class Products(
     val special: ArrayList<Special>,
     @SerializedName("tager_id")
 
-    var tagerId: Int? = 0
+    var tagerId: Int? = 0,
+
+    var  qty_name:String =""
 )

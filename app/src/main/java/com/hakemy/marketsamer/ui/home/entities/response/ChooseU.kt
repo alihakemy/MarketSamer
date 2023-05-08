@@ -24,4 +24,7 @@ data class ChooseU(
     val name: String, // منتج رقم ٣
     @SerializedName("prefitPrice")
     val prefitPrice: String // 96
+    ,
+
+    var  qty_name:String =""
 )
