@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Paint
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -87,11 +88,15 @@ class ShowProductActivity : BaseActivity() {
                         }
                     }
                     binding.imageView14.setOnClickListener {
-                        if( binding.textView8.text.toString().toInt()>1){
+                        if( binding.textView8.text.toString().toInt()>result.data.data.products.minorder){
                             kotlin.runCatching {
                                 val results = binding.textView8.text.toString().toInt().minus(1)
                                 binding.textView8.text=results.toString()
                             }
+                        }else{
+                            AwesomeDialog.build(this)
+                                .title(getString(R.string.minOrders))
+                                .onPositive(getString(R.string.thanks))
                         }
 
                     }
@@ -106,7 +111,7 @@ class ShowProductActivity : BaseActivity() {
                     setBestProductRecyclerViewAdapterMainScreen(result.data.data.productsRelation)
 
                     binding.productName.text = result.data.data.products.name.toString()
-                    binding.someId.text = result.data.data.products.qty_name.toString()
+                    binding.someId.text =result.data.data.products.minorder.toString() + " "+  result.data.data.products.qty_name.toString()
 
 
                     binding.currentPri.text =
@@ -118,10 +123,11 @@ class ShowProductActivity : BaseActivity() {
 
                     binding.details.text = result.data.data.products.content.toString()
                     binding.freedeliver.text =
-                        "  قم بطلب  ${result.data.data.products.shippingCostFreeAfter}  او اكثر لتصبح الشحنه مؤهله للشحن المجانى "
+                        getString(R.string.freedelivery) +" "+ result.data.data.products.shippingCostFreeAfter
 
 
 
+                    binding.textView8.text=result.data.data.products.minorder.toString()
 
                     binding.imageView13.setOnClickListener {
                         if (result.data.data.products.isFavourite.not()) {
@@ -147,7 +153,7 @@ class ShowProductActivity : BaseActivity() {
                         lifecycleScope.launch {
                             kotlin.runCatching {
 
-                                val cartItem = result.data.data.products.prefitPrice?.let { it1 ->
+                                val cartItem = result.data.data.products.discount?.let { it1 ->
                                     result.data.data.products.shippingCostFreeAfter?.let { it2 ->
                                         CartRequestAdd(
                                             productId = result.data.data.products.id.toString(),
@@ -202,7 +208,14 @@ class ShowProductActivity : BaseActivity() {
 
 
     private fun selection(result: ResultState.Success<ProductDetailsResponse>){
+
         kotlin.runCatching {
+            if(result.data.data.products.options.isNullOrEmpty()){
+                binding.imageView12.visibility=View.GONE
+            }else{
+                binding.imageView12.visibility=View.VISIBLE
+
+            }
             val sizes =ArrayList<String>()
 
 
@@ -227,6 +240,16 @@ class ShowProductActivity : BaseActivity() {
 
     }
     private fun renederSpecial(result: ResultState.Success<ProductDetailsResponse>) {
+        if(result.data.data.products.special.isNullOrEmpty()){
+            binding.recyclerView4.visibility=View.GONE
+            binding.sizee2.visibility=View.GONE
+            binding.imageView16.visibility=View.GONE
+
+        }else{
+            binding.recyclerView4.visibility=View.VISIBLE
+            binding.sizee2.visibility=View.VISIBLE
+            binding.imageView16.visibility=View.VISIBLE
+        }
         val adapt=SpecialAdapter()
 
         binding.recyclerView4.layoutManager=LinearLayoutManager(this)

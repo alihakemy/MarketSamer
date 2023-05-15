@@ -21,7 +21,7 @@ class BestOffersViewHolderMainScreen (val binding :ItemProductMainScreenBinding)
 
         Glide.with(binding.imageView5.context).load(dataX.imagePath).into(binding.imageView7)
         binding.appCompatTextView.text=dataX.name.toString()
-        binding.someId.text=dataX.qty_name.toString() +" "+ binding.someId.context.resources.getString(R.string.cup)
+        binding.someId.text=dataX.minorder.toString() +dataX.qty_name.toString()
         binding.price.text=dataX.discount.toString() +binding.someId2.context.getString(R.string.KWD)
         binding.someId2.text=dataX.mainprice.toString() +binding.someId2.context.getString(R.string.KWD)
         binding.textView4.text=dataX.prefitPrice.toString() +"%"

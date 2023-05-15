@@ -136,8 +136,16 @@ class ReViewOrderActivity : BaseActivity() {
                     binding.rvPaymentMethods.adapter = paymentMethodsAdapter
 
 
-                    // prices
-                    binding.tvTotal.text = "${it.data?.data?.total} ${getString(R.string.d_k)}"
+
+
+                    kotlin.runCatching {
+                        val t =
+                            it.data?.data?.products?.first()
+                                ?.total_price
+                        // prices
+                        binding.tvTotal.text = "${t} ${getString(R.string.d_k)}"
+
+                    }
                     binding.tvDelivery.text =
                         "${it.data?.data?.totaShippingCost} ${getString(R.string.d_k)}"
                     binding.tvOverall.text = "${it.data?.data?.total} ${getString(R.string.d_k)}"

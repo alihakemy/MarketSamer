@@ -177,24 +177,23 @@
 
                 <TextView
                     android:id="@+id/freedeliver"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
                     android:background="@drawable/red_rec"
                     android:fontFamily="@font/changa"
                     android:gravity="top"
                     android:lineSpacingExtra="-2sp"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    tools:text="التوصيل مجاني عند الطلب اكثر من 30 د.ك"
                     android:textAppearance="@style/some_id"
                     android:textColor="#DF1A2B"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/current_pri"
-                    app:layout_constraintTop_toBottomOf="@+id/current_pri" />
+                    app:layout_constraintTop_toBottomOf="@+id/current_pri"
+                    tools:text="التوصيل مجاني عند الطلب اكثر من 30 د.ك" />
 
                 <TextView
                     android:id="@+id/details"

@@ -21,11 +21,7 @@ class ContactUsActivity : BaseActivity() {
     companion object{
 
         fun startContactUsActivity(context: Context){
-            if(SharePreferenceManager.getIsVerified().not()){
-                RegisterActivity.startRegisterActivity(context)
 
-                return
-            }
             val intent= Intent(context, ContactUsActivity::class.java)
             intent.flags= Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(intent)

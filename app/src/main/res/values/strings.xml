@@ -278,4 +278,7 @@
     <string name="thanks">Thanks</string>
     <string name="Special">Special</string>
     <string name="selectSize">Select Size..</string>
+    <string name="shopNow">Shop Now</string>
+    <string name="freedelivery">Free Delivey After</string>
+    <string name="minOrders">minuim order</string>
 </resources>

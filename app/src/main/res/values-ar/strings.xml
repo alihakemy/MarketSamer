@@ -138,7 +138,7 @@
     <string name="area">المنطقة<font color="#DF1A2B"> * </font></string>
     <string name="district">قطعة<font color="#DF1A2B"> * </font></string>
     <string name="street">الشارع</string>
-    <string name="building">المبني</string>
+    <string name="building">منزل</string>
     <string name="floor">الطابق</string>
     <string name="extra_instructions">ارشادات اضافية</string>
     <string name="alley">جدة</string>
@@ -262,5 +262,8 @@
     <string name="Done">تم</string>
     <string name="Special">المواصفات</string>
     <string name="selectSize">اختر الحجم</string>
+    <string name="shopNow">تسوق الان</string>
+    <string name="freedelivery">التوصيل مجانى بعد اكثر من  </string>
+    <string name="minOrders">الحد الادنى للطلبات</string>
 
 </resources>
