@@ -145,7 +145,7 @@
     <string name="address_details">address details</string>
     <string name="house">house</string>
     <string name="work">work</string>
-    <string name="address_name">address name<font color="#DF1A2B"> * </font></string>
+    <string name="address_name">address name</string>
     <string name="government">government<font color="#DF1A2B"> * </font></string>
     <string name="area">area<font color="#DF1A2B"> * </font></string>
     <string name="district">district<font color="#DF1A2B"> * </font></string>
@@ -281,4 +281,6 @@
     <string name="shopNow">Shop Now</string>
     <string name="freedelivery">Free Delivey After</string>
     <string name="minOrders">minuim order</string>
+    <string name="select_payment_method">select Payment Method</string>
+    <string name="select_location">Select Location</string>
 </resources>

@@ -24,6 +24,7 @@ import com.myfatoorah.sdk.enums.MFAPILanguage
 import com.myfatoorah.sdk.enums.MFCurrencyISO
 import com.myfatoorah.sdk.views.MFResult
 import com.myfatoorah.sdk.views.MFSDK
+import es.dmoral.toasty.Toasty
 
 class ReViewOrderActivity : BaseActivity() {
 
@@ -165,6 +166,11 @@ class ReViewOrderActivity : BaseActivity() {
     }
 
     private fun submitOrder() {
+        if(paymentMethodsAdapter.getSelectedMethod().equals("")){
+            Toasty.error(this,getString(R.string.select_payment_method)).show()
+
+            return
+        }
         when (paymentMethodsAdapter.getSelectedMethod()) {
             "1" -> viewModel.submitOrder(
                 orderId = intent.getStringExtra("orderId").toString(),

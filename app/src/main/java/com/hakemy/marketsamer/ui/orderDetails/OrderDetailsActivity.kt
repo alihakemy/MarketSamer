@@ -2,22 +2,18 @@ package com.hakemy.marketsamer.ui.orderDetails
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.hakemy.marketsamer.R
 import com.hakemy.marketsamer.base.BaseActivity
 import com.hakemy.marketsamer.databinding.ActivityOrderDetailsBinding
 import com.hakemy.marketsamer.ui.main.MainActivity
 import com.hakemy.marketsamer.ui.orderDetails.responseOfCancel.CancelReponseAdapter
-import com.hakemy.marketsamer.ui.reViewOrder.adapter.CompaniesAdapter
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.services.RetrofitService
 import kotlinx.coroutines.launch
@@ -107,7 +103,8 @@ class OrderDetailsActivity : BaseActivity() {
                         binding.bottom.root.visibility=View.GONE
 
                     }
-                    result.data?.data?.products?.let { it1 -> companiesAdapter.insertItem(it1) }
+                    result.data?.data?.products?.let { it1 -> companiesAdapter.insertItem(it1,
+                    result.data.data.total) }
                     binding.rvCompaniesOrders.adapter = companiesAdapter
 
 

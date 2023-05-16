@@ -133,7 +133,7 @@
     <string name="address_details">تفاصيل العنوان</string>
     <string name="house">المنزل</string>
     <string name="work">العمل</string>
-    <string name="address_name">اسم العنوان<font color="#DF1A2B"> * </font></string>
+    <string name="address_name">اسم العنوان</string>
     <string name="government">المحافظة<font color="#DF1A2B"> * </font></string>
     <string name="area">المنطقة<font color="#DF1A2B"> * </font></string>
     <string name="district">قطعة<font color="#DF1A2B"> * </font></string>
@@ -141,7 +141,7 @@
     <string name="building">منزل</string>
     <string name="floor">الطابق</string>
     <string name="extra_instructions">ارشادات اضافية</string>
-    <string name="alley">جدة</string>
+    <string name="alley">الجدة</string>
     <string name="flat_number">رقم الشقة</string>
     <string name="add_new_address">اضافة عنوان جديد</string>
     <string name="edit_address">تعديل عنوان</string>
@@ -265,5 +265,7 @@
     <string name="shopNow">تسوق الان</string>
     <string name="freedelivery">التوصيل مجانى بعد اكثر من  </string>
     <string name="minOrders">الحد الادنى للطلبات</string>
+    <string name="select_payment_method">اختر طريقه دفع</string>
+    <string name="select_location">اختر عنوان</string>
 
 </resources>

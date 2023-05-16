@@ -105,12 +105,12 @@ class CartActivity : BaseActivity(), CartAdapter.RecycleListener {
     }
 
     override fun onAddClicked(position: Int, product: CartItemProduct) {
-        viewModel.editCart(product.id.toString(), "plus", this)
+        viewModel.editCart(product.id.toString(), "plus", this, getMacAddr(this))
 
     }
 
     override fun onMinusClicked(position: Int, product: CartItemProduct) {
-        viewModel.editCart(product.id.toString(), "minus", this)
+        viewModel.editCart(product.id.toString(), "minus", this, getMacAddr(this))
 
     }
 

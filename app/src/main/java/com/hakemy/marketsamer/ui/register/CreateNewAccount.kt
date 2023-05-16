@@ -62,7 +62,9 @@ class CreateNewAccount :
             }
 
         })
-
+        binding.imageView22.setOnClickListener {
+            activity?.onBackPressed()
+        }
 
     }
 

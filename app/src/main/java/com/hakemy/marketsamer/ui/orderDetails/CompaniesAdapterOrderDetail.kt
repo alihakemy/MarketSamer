@@ -2,21 +2,18 @@ package com.hakemy.marketsamer.ui.orderDetails
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.hakemy.marketsamer.R
-import com.hakemy.marketsamer.databinding.ItemCompanyOrderBinding
 import com.hakemy.marketsamer.databinding.OrderDetailsItemBinding
-import com.hakemy.marketsamer.ui.reViewOrder.adapter.CompaniesAdapter
-import com.hakemy.marketsamer.ui.reViewOrder.model.Product
 
 class CompaniesAdapterOrderDetail(private val context: Context,
 private val cancelOrder:(product:com.hakemy.marketsamer.ui.orderDetails.Model.Product)->Unit) :
     RecyclerView.Adapter<CompaniesAdapterOrderDetail.ViewHolder>() {
 
     private var _companiesList: MutableList<com.hakemy.marketsamer.ui.orderDetails.Model.Product> = ArrayList()
+    private var total:String =""
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemBinding =
@@ -39,24 +36,18 @@ private val cancelOrder:(product:com.hakemy.marketsamer.ui.orderDetails.Model.Pr
 
             }
 
-            tvPrice.text = "${product.price} ${context.getString(R.string.d_k)}"
+            tvPrice.text = "${product.price} ${context.getString(R.string.d_k)}" +"لكل قطعه"
             tvQuantity.text = product.status_product_name
 
-            if(product.status_product.equals("0")){
 
-                textView11.visibility=View.VISIBLE
-            }else{
-
-                textView11.visibility=View.GONE
-
-            }
-            textView11.setOnClickListener {
-                cancelOrder(product)
-            }
         }
     }
 
-    fun insertItem(companiesList: MutableList<com.hakemy.marketsamer.ui.orderDetails.Model.Product>) {
+    fun insertItem(
+        companiesList: MutableList<com.hakemy.marketsamer.ui.orderDetails.Model.Product>,
+        total: String
+    ) {
+
         _companiesList = companiesList
         notifyItemRangeChanged(0, _companiesList.size)
     }

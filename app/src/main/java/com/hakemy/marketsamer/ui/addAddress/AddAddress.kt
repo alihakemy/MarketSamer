@@ -23,6 +23,7 @@ import com.hakemy.marketsamer.ui.chooseAddresse.response.AddressItem
 import com.hakemy.marketsamer.ui.register.RegisterActivity
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.SharePreferenceManager
+import com.hakemy.marketsamer.utils.showToast
 
 class AddAddress : BaseActivity() {
 
@@ -161,6 +162,35 @@ class AddAddress : BaseActivity() {
         with(binding) {
             when (type) {
                 "house" -> {
+                    if( SharePreferenceManager.getlat().toString().equals("")){
+                        showToast(getString(R.string.select_location))
+                        return
+                    }
+                    if(etDistrict.isValid().not()){
+                       etDistrict.setError("")
+                        return
+                    }
+                    if(etStreet.isValid().not()){
+                        etStreet.setError("")
+                        return
+                    }
+                    if(etHouseBuildingNum.isValid().not()){
+                        etHouseBuildingNum.setError("")
+                        return
+                    }
+                    if(etHouseFloor.isValid().not()){
+                        etHouseFloor.setError("")
+                        return
+                    }
+                    if(etFlatNum.isValid().not()){
+                        etFlatNum.setError("")
+                        return
+                    }
+                    if(etWorkInstructions.isValid().not()){
+                        etWorkInstructions.setError("")
+                        return
+                    }
+
                     viewModel.add(
                         SharePreferenceManager.getlat().toString(),
                         SharePreferenceManager.getlng().toString(),
@@ -178,6 +208,28 @@ class AddAddress : BaseActivity() {
                     )
                 }
                 else -> {
+                    if( SharePreferenceManager.getlat().toString().equals("")){
+                        showToast(getString(R.string.select_location))
+                        return
+                    }
+                    if(etDistrict.isValid().not()){
+                        etDistrict.setError("")
+                        return
+                    }
+                    if(etStreet.isValid().not()){
+                        etStreet.setError("")
+                        return
+                    }
+
+                    if(etFlatNum.isValid().not()){
+                        etFlatNum.setError("")
+                        return
+                    }
+                    if(etWorkInstructions.isValid().not()){
+                        etWorkInstructions.setError("")
+                        return
+                    }
+
                     viewModel.add(
                         SharePreferenceManager.getlat().toString(),
                         SharePreferenceManager.getlng().toString(),
@@ -201,4 +253,7 @@ class AddAddress : BaseActivity() {
 }
 fun EditText.fetchText(): String {
     return this.text.toString().trim()
+}
+fun EditText.isValid(): Boolean {
+    return text.toString().isNullOrEmpty().not()
 }

@@ -79,6 +79,9 @@ hideProgress()
             findNavController().navigate(R.id.createNewAccount)
 
         }
+        binding.imageView21.setOnClickListener {
+            activity?.onBackPressed()
+        }
     }
 
 }

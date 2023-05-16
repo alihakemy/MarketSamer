@@ -11,6 +11,16 @@
         android:layout_height="wrap_content"
         tools:context=".ui.cycles.auth_cycle.fragment.login.LoginFragment">
 
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
         <LinearLayout
             android:id="@+id/ln_header"
             android:layout_width="match_parent"

@@ -37,12 +37,14 @@ class CartViewModel : ViewModel() {
         }
     }
 
-    fun editCart(toString: String, s: String,context:Context) {
+    fun editCart(toString: String, s: String,context:Context,macAddress: String) {
         viewModelScope.launch {
             try {
 
                 val result = RetrofitService.servicesApi().editCart(toString,s)
-
+                val map=HashMap<String,String>()
+                map.put("mac_address",macAddress)
+                _cartResponse.postValue(ResultState.Success( RetrofitService.servicesApi().getCart(map)))
 
             } catch (e: java.lang.Exception) {
             }
