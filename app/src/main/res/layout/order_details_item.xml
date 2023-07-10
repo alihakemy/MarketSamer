@@ -55,7 +55,7 @@
                 android:maxLines="1"
                 android:textAlignment="viewStart"
                 android:textColor="@color/color_black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 tools:ignore="TextContrastCheck"
                 tools:text="name" />
 
@@ -76,19 +76,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="TextContrastCheck" />
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/appCompatTextView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/changa"
-                    android:text="@string/det"
-                    android:textColor="@color/color_dark_grey"
-                    android:textSize="@dimen/_9ssp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4"
-                    tools:ignore="TextContrastCheck" />
-
                 <TextView
                     android:id="@+id/qty"
                     android:layout_width="wrap_content"
@@ -101,17 +88,6 @@
                     app:layout_constraintStart_toEndOf="@+id/appCompatTextView4"
                     app:layout_constraintTop_toTopOf="@+id/appCompatTextView4" />
 
-                <TextView
-                    android:id="@+id/qty2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/changa"
-                    android:text="بلاستك"
-                    android:textColor="@color/black"
-                    app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView5"
-                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView4"
-                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView5" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -102,7 +102,11 @@ class ShowProductActivity : BaseActivity() {
                     }
                     val imageList2 = ArrayList<SlideModel>()
                     result.data.data.products.images?.forEach {
-                        imageList2.add(SlideModel(it.toString(), ScaleTypes.FIT))
+
+                        if(it.imagePath.toString().isNullOrEmpty().not()){
+                            imageList2.add(SlideModel(it.imagePath.toString(), ScaleTypes.FIT))
+
+                        }
 
                     }
                     imageList2.add(SlideModel(result.data.data.products.imagePath, ScaleTypes.FIT))

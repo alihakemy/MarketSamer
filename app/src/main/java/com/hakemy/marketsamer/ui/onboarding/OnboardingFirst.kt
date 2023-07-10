@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.hakemy.marketsamer.R
 import com.hakemy.marketsamer.base.BaseFragment
 import com.hakemy.marketsamer.databinding.FragmentOnboardingFirstBinding
+import com.hakemy.marketsamer.ui.main.MainActivity
 import com.hakemy.marketsamer.ui.onboarding.viewModel.OnboardingViewModel
 import com.hakemy.marketsamer.utils.ResultState
 
@@ -37,6 +38,7 @@ class OnboardingFirst :
 
             when(val result= it){
                 is ResultState.Error -> {
+                    MainActivity.startMainActivity(requireActivity())
 
                 }
                 ResultState.Loading -> {
@@ -44,6 +46,10 @@ class OnboardingFirst :
                 }
                 is ResultState.Success -> {
 
+                    if(result.data.data.isNullOrEmpty()){
+                        MainActivity.startMainActivity(requireActivity())
+
+                    }
                     kotlin.runCatching {
                         Glide.with(this).load(result.data.data.first().image).into(binding.imageView)
 

@@ -2,7 +2,10 @@ package com.hakemy.marketsamer.ui.onboarding
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 
 import com.hakemy.marketsamer.base.BaseActivity
 import com.hakemy.marketsamer.databinding.ActivityOnboardingBinding
@@ -30,6 +33,28 @@ class OnboardingActivity : BaseActivity() {
         }
         SharePreferenceManager.storeIsShowOnboarding(true)
 
+        viewModel.result.observe(this, Observer {
+
+            when(val result= it){
+                is ResultState.Error -> {
+                    MainActivity.startMainActivity(this)
+
+                }
+                ResultState.Loading -> {
+
+                    binding.root.visibility=View.GONE
+                }
+                is ResultState.Success -> {
+
+                    if(result.data.data.isNullOrEmpty()){
+                        MainActivity.startMainActivity(this)
+
+                    }
+
+                }
+            }
+
+        })
 
 
     }

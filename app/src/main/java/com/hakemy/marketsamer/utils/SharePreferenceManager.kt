@@ -87,7 +87,7 @@ object SharePreferenceManager {
 
     }
     fun getlat (): String? {
-        return sharedPreferences?.getString("lat", "")
+        return sharedPreferences?.getString("lat", "1.3")
 
     }
 
@@ -97,7 +97,7 @@ object SharePreferenceManager {
 
     }
     fun getlng (): String? {
-        return sharedPreferences?.getString("lng", "")
+        return sharedPreferences?.getString("lng", "2.3")
 
     }
 

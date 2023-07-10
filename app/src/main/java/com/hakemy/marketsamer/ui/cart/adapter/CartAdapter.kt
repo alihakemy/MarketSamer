@@ -31,7 +31,6 @@ class CartAdapter(private val context: Context, private val listener: RecycleLis
             qty.text = product.quantity.toString()
 
             kotlin.runCatching {
-                qty2.text = product.feature_product.first().feature_name
 
             }
 

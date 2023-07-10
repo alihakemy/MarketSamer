@@ -32,7 +32,7 @@ private val cancelOrder:(product:com.hakemy.marketsamer.ui.orderDetails.Model.Pr
             qty.text=product.quantity.toString()
 
             kotlin.runCatching {
-                qty2.text=product.feature_product.first().feature_name
+//                qty2.text=product.feature_product.first().feature_name
 
             }
 
