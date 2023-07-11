@@ -34,10 +34,7 @@ class CompaniesAdapter(private val context: Context) :
             tvName.text = product.name
             qty.text=product.quantity.toString()
 
-            kotlin.runCatching {
-                qty2.text=product.feature_product.first().feature_name
 
-            }
 
             tvPrice.text = "${product.price} ${context.getString(R.string.d_k)}"
             tvQuantity.text = product.quantity

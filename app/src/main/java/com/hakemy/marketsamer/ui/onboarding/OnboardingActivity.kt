@@ -27,34 +27,14 @@ class OnboardingActivity : BaseActivity() {
         setContentView(binding.root)
 
         viewModel= ViewModelProvider(this)[OnboardingViewModel::class.java]
+        SharePreferenceManager.storeIsShowOnboarding(true)
+
         if(SharePreferenceManager.getIsShowOnboarding()){
             MainActivity.startMainActivity(this)
             finish()
         }
-        SharePreferenceManager.storeIsShowOnboarding(true)
 
-        viewModel.result.observe(this, Observer {
 
-            when(val result= it){
-                is ResultState.Error -> {
-                    MainActivity.startMainActivity(this)
-
-                }
-                ResultState.Loading -> {
-
-                    binding.root.visibility=View.GONE
-                }
-                is ResultState.Success -> {
-
-                    if(result.data.data.isNullOrEmpty()){
-                        MainActivity.startMainActivity(this)
-
-                    }
-
-                }
-            }
-
-        })
 
 
     }

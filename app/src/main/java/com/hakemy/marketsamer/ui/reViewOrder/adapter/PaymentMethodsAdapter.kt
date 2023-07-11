@@ -28,7 +28,12 @@ class PaymentMethodsAdapter(private val context: Context) :
             tvName.text = method.name
             cbButton.isChecked = method.isChecked
             //
+
             parent.setOnClickListener {
+                _methodsList.forEach { item ->
+                    item.isChecked = false
+                }
+
                 _methodsList.forEach { item ->
                     item.isChecked = method.id == item.id
                 }

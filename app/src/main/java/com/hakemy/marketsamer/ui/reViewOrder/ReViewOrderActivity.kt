@@ -19,6 +19,7 @@ import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.SharePreferenceManager
 import com.hakemy.marketsamer.utils.showToast
 import com.myfatoorah.sdk.entity.executepayment.MFExecutePaymentRequest
+import com.myfatoorah.sdk.entity.executepayment.Supplier
 import com.myfatoorah.sdk.entity.paymentstatus.MFGetPaymentStatusResponse
 import com.myfatoorah.sdk.enums.MFAPILanguage
 import com.myfatoorah.sdk.enums.MFCurrencyISO
@@ -194,6 +195,8 @@ class ReViewOrderActivity : BaseActivity() {
 
     private fun executePayment() {
         showProgress()
+        val Supplier=ArrayList<Supplier>()
+        Supplier.add(Supplier(27,null,totalPrice.toDoubleOrNull()))
         val request = MFExecutePaymentRequest(
             1,
             user.name,
@@ -211,7 +214,7 @@ class ReViewOrderActivity : BaseActivity() {
             null,
             null,
             null,
-            null,
+            Supplier,
         )
         MFSDK.executePayment(
             this,

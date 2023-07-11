@@ -36,7 +36,7 @@ private val cancelOrder:(product:com.hakemy.marketsamer.ui.orderDetails.Model.Pr
 
             }
 
-            tvPrice.text = "${product.price} ${context.getString(R.string.d_k)}" +"لكل قطعه"
+            tvPrice.text = "${product.price} ${context.getString(R.string.d_k)}"
             tvQuantity.text = product.status_product_name
 
 

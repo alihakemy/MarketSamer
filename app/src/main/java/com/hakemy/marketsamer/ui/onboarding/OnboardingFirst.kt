@@ -38,7 +38,6 @@ class OnboardingFirst :
 
             when(val result= it){
                 is ResultState.Error -> {
-                    MainActivity.startMainActivity(requireActivity())
 
                 }
                 ResultState.Loading -> {
@@ -46,10 +45,7 @@ class OnboardingFirst :
                 }
                 is ResultState.Success -> {
 
-                    if(result.data.data.isNullOrEmpty()){
-                        MainActivity.startMainActivity(requireActivity())
 
-                    }
                     kotlin.runCatching {
                         Glide.with(this).load(result.data.data.first().image).into(binding.imageView)
 

@@ -123,7 +123,7 @@
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/changa"
 
-                    android:text="اكواب بلاستيكية بغطاء"
+                    tools:text="اكواب بلاستيكية بغطاء"
                     android:textAppearance="@style/some_id"
 
                     android:textSize="15sp"
@@ -171,7 +171,7 @@
                     android:gravity="top"
                     android:lineSpacingExtra="-12sp"
 
-                    android:text="76,99 د.ك"
+                   tools:text="76,99 د.ك"
                     android:textAppearance="@style/list_price"
                     app:layout_constraintBottom_toBottomOf="@+id/current_pri"
                     app:layout_constraintStart_toEndOf="@+id/current_pri" />

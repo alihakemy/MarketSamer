@@ -39,10 +39,10 @@ class BaseApp : LocalizationApplication() {
 
         ThemeHelper.applyTheme(ThemeHelper.ThemeMode.LIGHT)
         MFSDK.init(
-            "rLtt6JWvbUHDDhsZnfpAhpYk4dxYDQkbcPTyGaKp2TYqQgG7FGZ5Th_WD53Oq8Ebz6A53njUoo1w3pjU1D4vs_ZMqFiz_j0urb_BH9Oq9VZoKFoJEDAbRZepGcQanImyYrry7Kt6MnMdgfG5jn4HngWoRdKduNNyP4kzcp3mRv7x00ahkm9LAK7ZRieg7k1PDAnBIOG3EyVSJ5kK4WLMvYr7sCwHbHcu4A5WwelxYK0GMJy37bNAarSJDFQsJ2ZvJjvMDmfWwDVFEVe_5tOomfVNt6bOg9mexbGjMrnHBnKnZR1vQbBtQieDlQepzTZMuQrSuKn-t5XZM7V6fCW7oP-uXGX-sMOajeX65JOf6XVpk29DP6ro8WTAflCDANC193yof8-f5_EYY-3hXhJj7RBXmizDpneEQDSaSz5sFk0sV5qPcARJ9zGG73vuGFyenjPPmtDtXtpx35A-BVcOSBYVIWe9kndG3nclfefjKEuZ3m4jL9Gg1h2JBvmXSMYiZtp9MR5I6pvbvylU_PP5xJFSjVTIz7IQSjcVGO41npnwIxRXNRxFOdIUHn0tjQ-7LwvEcTXyPsHXcMD8WtgBh-wxR8aKX7WPSsT1O8d8reb2aR7K3rkV3K82K_0OgawImEpwSvp9MNKynEAJQS6ZHe_J_l77652xwPNxMRTMASk1ZsJL",
+            "rdihYRkPQ1922NG2QYRtq4U69NUHxteS-Jn1p2E3B9odNxhmphbGltcL-5E97l1KqveeTnQjfJ1lTPT7DygVd6glt-gj0DhonHgZ5Qe7QFQyuBrqnYycuMR3perDo6cmwzmcEhgwem8vngjbWH8MhVn3Lehfln-d9V4yO7SEkIWaHKt9fZTNSg71kbcTV1xQv8OHTdwoWzjgCYy7FwZQLsgsdAYeQ0gM51Y-HMzwprOzVE1CAl4gHuFmK0_18n_UIBULQzzWp6fijBjFWjLh-WdQRjvgWnamfTv2hLcNQ_Zxc1VzFFdcyK7_YJxsP9t4KTJl1Ip3mEfDAnklx_uM5KBc8a256RZfGFoCrVIsKP-R4LpMSN1haIojw8ZApeabH0s5FK0kAEelmicdIIx3XB2HhcROrxVzQmwMkM4z88gOyFIauNxgeJcqvvDhCS1KAsM5U3N34TvyNuDHipdHhlpOHUgw72vgJLaa-DlmAPGv_mhYH8yzWK7dDd-MMTPGMCZ9bDuYdX8U0X0oPLgDjZAb1lGVsaCk1D8UB4OGP5-90ik78W_-6-N-OVyX8YcXxTbmVQlYhEr1Er4DqHEP3SyCphj1sT02C6N_M22NsxOeVBIUgNByUtvttntTG9VZ3Pt07g29C-B0egzCKg9LJMpmnNjOjtteSiwGl4WZTbemJj8NP-USVIzN7m1kI32Y-KWUltDTg8bjl59BN6x6_urtRlFYM1MR6xWpAqAHHafQEeERSjz6GSh2tfxxaEKLTPYzTw",
             MFCountry.KUWAIT,
-            MFEnvironment.TEST
-        );
+            MFEnvironment.LIVE
+                )
 
     }
 
