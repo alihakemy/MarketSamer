@@ -28,6 +28,7 @@ import com.hakemy.marketsamer.ui.showProduct.entities.ProductsRelation
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.getMacAddr
 import com.hakemy.marketsamer.utils.services.RetrofitService
+import es.dmoral.toasty.Toasty
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -155,34 +156,32 @@ class ShowProductActivity : BaseActivity() {
                     binding.constraintLayout.setOnClickListener {
 
                         lifecycleScope.launch {
-                            kotlin.runCatching {
+                            try {
 
                                 val cartItem = result.data.data.products.discount?.let { it1 ->
-                                    result.data.data.products.shippingCostFreeAfter?.let { it2 ->
+
                                         CartRequestAdd(
                                             productId = result.data.data.products.id.toString(),
                                             quantity = binding.textView8.text.toString(),
                                             price = it1,
                                             companyId = result.data.data.products.tagerId.toString(),
-                                            shippingCost = it2,
+
 
                                             macAddress = getMacAddr(this@ShowProductActivity)
                                         )
-                                    }
+
                                 }
                                 if (cartItem != null) {
                                     RetrofitService.servicesApi().addToCart(cartItem)
                                 }
 
+                            }catch (e:Exception){
+                                e.printStackTrace()
                             }
 
                         }
+                        Toasty.success(this@ShowProductActivity,getString(R.string.Congratulations)).show()
 
-                        AwesomeDialog.build(this)
-                            .title(getString(R.string.Congratulations))
-                            .onPositive(getString(R.string.gotoCart)) {
-                                CartActivity.startCartActivity(this)
-                            }
 
                     }
 

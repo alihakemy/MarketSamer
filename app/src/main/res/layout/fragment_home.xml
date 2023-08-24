@@ -136,6 +136,7 @@
                         android:text="@string/fav_offers"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/_14ssp"
+                        android:visibility="invisible"
                         app:layout_constraintEnd_toStartOf="@id/iv_companies_more"
                         app:layout_constraintHorizontal_bias="0"
                         app:layout_constraintStart_toStartOf="parent"
@@ -244,6 +245,8 @@
                             android:text="@string/best_offers"
                             android:textColor="@color/color_black"
                             android:textSize="@dimen/_14ssp"
+                            android:visibility="invisible"
+
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"

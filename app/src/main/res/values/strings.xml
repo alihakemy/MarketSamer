@@ -283,4 +283,5 @@
     <string name="minOrders">minuim order</string>
     <string name="select_payment_method">select Payment Method</string>
     <string name="select_location">Select Location</string>
+    <string name="cannot">order can not less than</string>
 </resources>

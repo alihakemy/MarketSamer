@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.hakemy.marketsamer.R
@@ -17,6 +18,7 @@ import com.hakemy.marketsamer.ui.register.RegisterActivity
 import com.hakemy.marketsamer.ui.register.serviceModel.response.User
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.SharePreferenceManager
+import com.hakemy.marketsamer.utils.ToastType
 import com.hakemy.marketsamer.utils.showToast
 import com.myfatoorah.sdk.entity.executepayment.MFExecutePaymentRequest
 import com.myfatoorah.sdk.entity.executepayment.Supplier
@@ -76,9 +78,30 @@ class ReViewOrderActivity : BaseActivity() {
                     intent.getStringExtra("orderId").toString(),
                     etCoupon.fetchText()
                 )
+
+
             }
             btnSave.setOnClickListener { submitOrder() }
         }
+        viewModel._couponResponse.observe(this, Observer {
+            when(val result =it){
+                is ResultState.Error -> {
+                    hideProgress()
+                    showToast(result.exceptionMessage.toString())
+
+                }
+                ResultState.Loading -> {
+                    showProgress()
+
+                }
+                is ResultState.Success -> {
+                    hideProgress()
+                    viewModel.confirmCart(intent.getStringExtra("orderId").toString())
+                    showToast(result.data.message.toString(), ToastType.SUCCESS)
+
+                }
+            }
+        })
         viewModel.confirmCart(intent.getStringExtra("orderId").toString())
 
         viewModel.submitOrderResponse.observe(this, Observer {
@@ -91,8 +114,7 @@ class ReViewOrderActivity : BaseActivity() {
                     showProgress()
                 }
                 is ResultState.Success -> {
-                    hideProgress()
-                    Log.e("Dataaaa",result.data?.data?.order_data?.order_number.toString())
+
                     PaymentSuccessActivity.startPaymentSuccessActivity(
                         this,
                         orderNo = result.data?.data?.order_data?.order_number.toString(),
@@ -100,7 +122,6 @@ class ReViewOrderActivity : BaseActivity() {
                         paymentMethod = result.data?.data?.order_data?.payment_method.toString(),
                         id=intent.getStringExtra("orderId").toString()
                     )
-
                 }
             }
 
@@ -142,8 +163,7 @@ class ReViewOrderActivity : BaseActivity() {
 
                     kotlin.runCatching {
                         val t =
-                            it.data?.data?.products?.first()
-                                ?.total_price
+                            it.data?.data?.TotalPrice
                         // prices
                         binding.tvTotal.text = "${t} ${getString(R.string.d_k)}"
 
@@ -160,6 +180,12 @@ class ReViewOrderActivity : BaseActivity() {
 
                     }
 
+                    if(it.data?.data?.dicountCode==null){
+                        binding.lnCouponPrice.visibility= View.GONE
+                    }else{
+                        binding.tvCouponPrice.text = "${it.data?.data?.dicountCode} % "
+
+                    }
 
                 }
             }

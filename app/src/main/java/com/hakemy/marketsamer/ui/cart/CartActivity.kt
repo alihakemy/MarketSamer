@@ -19,6 +19,7 @@ import com.hakemy.marketsamer.ui.cart.models.CartItemProduct
 import com.hakemy.marketsamer.ui.chooseAddresse.ChooseAddressActivity
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.getMacAddr
+import com.hakemy.marketsamer.utils.showToast
 import kotlinx.coroutines.launch
 
 class CartActivity : BaseActivity(), CartAdapter.RecycleListener {
@@ -83,8 +84,14 @@ class CartActivity : BaseActivity(), CartAdapter.RecycleListener {
                             "${result.data.data?.total} ${getString(R.string.d_k)}"
 
                         binding.btnConfirm.setOnClickListener {
-                            if (cartAdapter.itemCount > 0) {
-                                ChooseAddressActivity.startChooseAddressActivity(this,result.data.data?.total.toString(),orderId)
+                            if (cartAdapter.itemCount > 0 ) {
+                                if(result.data.data.order_info.orderLessThan.toDouble().toLong()
+                                    <= result.data.data?.total?.toString()?.toDouble()?.toLong() ?:0 ){
+                                    ChooseAddressActivity.startChooseAddressActivity(this,result.data.data?.total.toString(),orderId)
+
+                                }else{
+                                    showToast(getString(R.string.cannot)+" ${result.data.data.order_info.orderLessThan}")
+                                }
                             }
                         }
                     }.onFailure {

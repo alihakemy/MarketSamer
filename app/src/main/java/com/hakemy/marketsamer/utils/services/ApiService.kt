@@ -18,6 +18,7 @@ import com.hakemy.marketsamer.ui.profile.editePersonalData.UserDataResponse
 import com.hakemy.marketsamer.ui.profile.notification.model.NotificationsResponse
 import com.hakemy.marketsamer.ui.profile.otherPages.model.pagesResponse
 import com.hakemy.marketsamer.ui.reViewOrder.model.ReviewOrderResponse
+import com.hakemy.marketsamer.ui.reViewOrder.modelss.Modelld
 import com.hakemy.marketsamer.ui.register.serviceModel.CreateNewAccountRequest
 import com.hakemy.marketsamer.ui.register.serviceModel.LoginRequest
 import com.hakemy.marketsamer.ui.register.serviceModel.ResetPasswordRequest
@@ -193,7 +194,7 @@ interface ApiService {
         @Field("total_price") totalPrice: String,
         @Field("payment_status") paymentStatus: String,
         @Field("totaShippingCost") totalShippingCost: String,
-    ): com.hakemy.marketsamer.ui.reViewOrder.submitOrderModel.SubmitOrderResponse
+    ): Modelld
 
 
     @FormUrlEncoded

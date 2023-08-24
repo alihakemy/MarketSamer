@@ -126,7 +126,7 @@
     <string name="it_is_not_possible_to_order_less_than_the_specified_quantity">لا يمكن طلب كمية أقل من المحددة</string>
     <string name="eligible_for_free_shipping">مؤهل للشحن المجانى</string>
     <string name="description">الوصف</string>
-    <string name="add_to_cart">اضافة الي السلة</string>
+    <string name="add_to_cart">اضافة الى السلة</string>
     <string name="similar_products">منتجات مشابهة</string>
     <string name="save_address">حفظ العنوان</string>
     <string name="choose_your_location_on_map">تحديد موقعك من الخريطة</string>
@@ -141,7 +141,7 @@
     <string name="building">منزل</string>
     <string name="floor">الطابق</string>
     <string name="extra_instructions">ارشادات اضافية</string>
-    <string name="alley">الجدة</string>
+    <string name="alley">جادا</string>
     <string name="flat_number">رقم الشقة</string>
     <string name="add_new_address">اضافة عنوان جديد</string>
     <string name="edit_address">تعديل عنوان</string>
@@ -267,5 +267,6 @@
     <string name="minOrders">الحد الادنى للطلبات</string>
     <string name="select_payment_method">اختر طريقه دفع</string>
     <string name="select_location">اختر عنوان</string>
+    <string name="cannot">النظام لا يمكن أن يقل عن</string>
 
 </resources>

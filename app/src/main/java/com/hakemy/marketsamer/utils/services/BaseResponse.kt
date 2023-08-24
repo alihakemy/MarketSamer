@@ -9,4 +9,5 @@ val key: String?,
     val status: Boolean?,
   val data: T?,
     val msg: String?,
+val message: String?,
 ) : Serializable

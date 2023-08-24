@@ -105,7 +105,13 @@ class ProfileFragment :
 
                         }
                         is ResultState.Success -> {
-                            binding.appCompatTextView.text = results.data.name.toString()
+                            kotlin.runCatching {
+                                if(results.data.name.isNullOrEmpty().not()){
+                                    binding.appCompatTextView.text = results.data.name.toString()
+
+                                }
+
+                            }
 
                         }
                     }

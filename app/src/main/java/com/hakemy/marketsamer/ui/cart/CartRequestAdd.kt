@@ -16,7 +16,5 @@ data class CartRequestAdd(
     @SerializedName("product_id")
     val productId: String, // 8
     @SerializedName("quantity")
-    val quantity: String, // 1
-    @SerializedName("shipping_cost")
-    val shippingCost: String // 33
+    val quantity: String
 )

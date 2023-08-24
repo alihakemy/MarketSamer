@@ -120,6 +120,12 @@ class OrderDetailsActivity : BaseActivity() {
                         "${result.data?.data?.totaShippingCost} ${getString(R.string.d_k)}"
                     binding.tvOverall.text = "${result.data?.data?.total} ${getString(R.string.d_k)}"
 
+                    if(result.data?.data?.dicountCode==null){
+                        binding.lnCouponPrice.visibility=View.GONE
+                    }else{
+                        binding.tvCouponPrice.text = "${result.data?.data?.dicountCode} % "
+
+                    }
 
 
 

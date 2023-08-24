@@ -329,7 +329,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
                                 android:layout_marginTop="@dimen/_6sdp"
-                                android:visibility="gone"
                                 android:orientation="horizontal">
 
                                 <androidx.appcompat.widget.AppCompatTextView

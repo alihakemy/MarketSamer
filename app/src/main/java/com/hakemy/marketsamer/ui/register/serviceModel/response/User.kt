@@ -7,13 +7,13 @@ import androidx.annotation.Keep
 @Keep
 data class User(
     @SerializedName("email")
-    val email: String, // alisami@gmail.com
+    val email: String?= "", // alisami@gmail.com
     @SerializedName("id")
     val id: Int, // 6302
     @SerializedName("imagePath")
     val imagePath: String, // https://sharwa.masharia.co/storage/images/user
     @SerializedName("name")
-    val name: String, // samer
+    val name: String ?="", // samer
     @SerializedName("phone")
     val phone: String, // +96555123454678
     @SerializedName("rate")

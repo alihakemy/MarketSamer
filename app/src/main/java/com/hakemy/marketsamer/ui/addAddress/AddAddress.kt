@@ -186,10 +186,7 @@ class AddAddress : BaseActivity() {
                         etFlatNum.setError("")
                         return
                     }
-                    if(etWorkInstructions.isValid().not()){
-                        etWorkInstructions.setError("")
-                        return
-                    }
+
 
                     viewModel.add(
                         SharePreferenceManager.getlat().toString(),
@@ -225,10 +222,7 @@ class AddAddress : BaseActivity() {
                         etFlatNum.setError("")
                         return
                     }
-                    if(etWorkInstructions.isValid().not()){
-                        etWorkInstructions.setError("")
-                        return
-                    }
+
 
                     viewModel.add(
                         SharePreferenceManager.getlat().toString(),

@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.hakemy.marketsamer.ui.reViewOrder.model.ReviewOrderResponse
+import com.hakemy.marketsamer.ui.reViewOrder.modelss.Modelld
 import com.hakemy.marketsamer.ui.reViewOrder.submitOrderModel.SubmitOrderResponse
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.services.BaseResponse
@@ -19,14 +20,13 @@ class ReviewOrderViewModel :ViewModel() {
     val confirmResponse: MutableLiveData<ResultState<ReviewOrderResponse>>
         get() = _confirmResponse
 
-    private val _couponResponse = MutableLiveData<ResultState<BaseResponse<Int>>>()
+     val _couponResponse = MutableLiveData<ResultState<BaseResponse<Int>>>()
     val couponResponse: MutableLiveData<ResultState<BaseResponse<Int>>>
         get() = _couponResponse
 
-    private val _submitOrderResponse =
-        MutableLiveData<ResultState<SubmitOrderResponse>>()
-    val submitOrderResponse: MutableLiveData<ResultState<SubmitOrderResponse>>
-        get() = _submitOrderResponse
+     val submitOrderResponse =
+        MutableLiveData<ResultState<Modelld>>()
+
 
     fun confirmCart(orderId: String) {
         _confirmResponse.value =ResultState.Loading
@@ -69,15 +69,15 @@ class ReviewOrderViewModel :ViewModel() {
         paymentStatus: String,
         totalShippingCost: String
     ) {
-        _submitOrderResponse.value =ResultState.Loading
+        submitOrderResponse.value =ResultState.Loading
         viewModelScope.launch {
             try {
 
                 val result =RetrofitService.servicesApi().submitOrder(orderId,paymentMethod,
                 totalPrice,paymentStatus,totalShippingCost)
-                _submitOrderResponse.postValue(ResultState.Success(result))
+                submitOrderResponse.postValue(ResultState.Success(result))
             }catch (e:Exception){
-                _submitOrderResponse.postValue(ResultState.Error(e.localizedMessage))
+                submitOrderResponse.postValue(ResultState.Error(e.localizedMessage))
 
             }
 

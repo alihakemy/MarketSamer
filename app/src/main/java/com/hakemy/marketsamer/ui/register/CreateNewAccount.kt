@@ -16,6 +16,7 @@ import com.hakemy.marketsamer.ui.register.serviceModel.CreateNewAccountRequest
 import com.hakemy.marketsamer.ui.register.viewModel.RegisterViewModel
 import com.hakemy.marketsamer.utils.ResultState
 import com.hakemy.marketsamer.utils.SharePreferenceManager
+import com.hakemy.marketsamer.utils.showToast
 
 
 class CreateNewAccount :
@@ -29,33 +30,54 @@ class CreateNewAccount :
             requireActivity().onBackPressed()
         }
         binding.btnSignUp.setOnClickListener {
-            viewModel.createNewAccount(
-                CreateNewAccountRequest(
-                    binding.etName.text.toString(),
-                    binding.email.text.toString(),
-                    binding.etPassword.text.toString(),
-                    binding.etPhone.text.toString()
+            if (binding.etPhone.text.toString().isNullOrEmpty().not()
+                && binding.etPassword.text.toString().isNullOrEmpty().not()) {
+                viewModel.createNewAccount(
+                    CreateNewAccountRequest(
+                        binding.etName.text.toString(),
+                        binding.email.text.toString(),
+                        binding.etPassword.text.toString(),
+                        binding.etPhone.text.toString()
+                    )
                 )
-            )
+            } else {
+                if (binding.etPhone.text.toString().isNullOrEmpty()){
+                    binding.etPhone.error = getString(R.string.cannot)
+                }
+                if (binding.etPassword.text.toString().isNullOrEmpty()){
+                    binding.etPassword.error = getString(R.string.cannot)
+
+                }
+
+            }
+
 
         }
         viewModel.createNewAccount.observe(this, Observer {
 
             when (val result = it) {
                 is ResultState.Error -> {
-               hideProgress()
+                    hideProgress()
+                    requireActivity().showToast(result.exceptionMessage.toString())
+
                 }
+
                 ResultState.Loading -> {
-                   showProgress()
+                    showProgress()
                 }
+
                 is ResultState.Success -> {
-                 hideProgress()
-                    result.data.data?.user?.let { it1 -> SharePreferenceManager.storeUserObject(it1)
+                    hideProgress()
+                    result.data.data?.user?.let { it1 ->
+                        SharePreferenceManager.storeUserObject(it1)
 
                         SharePreferenceManager.storeToken(result.data.data.token.toString())
                         SharePreferenceManager.storeVerificationCode(result.data.data.activationCode)
-                       hideProgress()
+                        hideProgress()
                         findNavController().navigate(R.id.verificationCode)
+                    }?:let {
+                        requireActivity().showToast(result.data.status.toString())
+
                     }
 
                 }
