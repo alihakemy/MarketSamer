@@ -10,6 +10,7 @@ import com.hakemy.marketsamer.databinding.ItemCartBinding
 import com.hakemy.marketsamer.databinding.MyOrderItemBinding
 import com.hakemy.marketsamer.ui.cart.adapter.CartAdapter
 import com.hakemy.marketsamer.ui.myOrders.models.Wait
+import com.hakemy.marketsamer.ui.orderDetails.OrderDetailsActivity
 
 
 class MyOrderAdapter : RecyclerView.Adapter<MyOrderAdapterViewHolder>() {
@@ -49,6 +50,10 @@ class MyOrderAdapterViewHolder (val binding : MyOrderItemBinding):RecyclerView.V
                 .load(item.images.first()).into(binding.ivImages)
         }
 
+        binding.root.setOnClickListener {
+            OrderDetailsActivity.startOrderDetailsActivity(it.context,item.id.toString())
+
+        }
 
     }
 
